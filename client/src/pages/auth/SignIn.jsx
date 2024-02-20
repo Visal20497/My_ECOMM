@@ -45,7 +45,7 @@ function SignIn() {
   }
   return (
     <Layout title="Login -ecomm">
-      <h4 className="text-center m-5">Login Form </h4>
+      <h4 className="text-center m-5">LogIn Form </h4>
       <div className="container" style={{ height: "70vh" }}>
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-md-5">

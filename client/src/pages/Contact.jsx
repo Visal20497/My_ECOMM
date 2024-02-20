@@ -5,7 +5,7 @@ function Contact() {
   return (
     <Layout title="Contact -ecomm">
       <div class="container">
-  <h2 class="text-center m-3">Contact Us</h2>
+  <h2 class="text-center m-3" style={{color:"#a10a87"}}>Contact Us</h2>
   <div class="row d-flex">
     <div class="col-md-4">
       <img

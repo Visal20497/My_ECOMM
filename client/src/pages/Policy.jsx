@@ -5,7 +5,7 @@ function Policy() {
   return (
     <Layout title="Policy -ecomm">
       <div class="container">
-        <h2 class="text-center m-3">Privacy Policy</h2>
+        <h2 class="text-center m-3" style={{color:"#a10a1b"}}>Privacy Policy</h2>
         <div class="row d-flex">
           <div class="col-md-4">
             <img

@@ -6,7 +6,7 @@ function AdminDashboard() {
   return (
     <Layout>
     <div className="container">
-     <h1 className='text-center m-3'>Admin Dashboard</h1>
+     <h1 className='text-center m-3' style={{color:"#a10a37"}}>Admin Dashboard</h1>
      <div className="row d-flex justify-content-start">
         <div className="col-md-3">
            <AdminDashboardMenu/>

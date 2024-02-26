@@ -18,9 +18,9 @@ function Header() {
     setAuth({ user: "", token: null });
   }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"#c6c995"}}>
-      <div className="container-fluid">
-        <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
+    <nav className="navbar navbar-expand-lg navbar-light p-3" style={{backgroundColor:"#c6c995"}}>
+      <div className="container-fluid" >
+        <Link className="navbar-brand d-flex align-items-center gap-2" to="/" style={{color:"white"}}>
         <AiFillBank />  My~Shop
         </Link>
         <button
@@ -34,21 +34,21 @@ function Header() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0" >
             <li className="nav-item">
-              <Link className="nav-link active d-flex align-items-center gap-1" aria-current="page" to="/" >
+              <Link className="nav-link active d-flex align-items-center gap-1" aria-current="page" to="/" style={{color:"white"}} >
               <AiFillHome />  Home
               </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link d-flex align-items-center gap-1" to="/category">
+              <NavLink className="nav-link d-flex align-items-center gap-1" to="/category"  style={{color:"white"}}>
               <MdCategory /> CATEGORY
               </NavLink>
             </li>
             {auth?.token ? (
               <>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown"  style={{color:"white"}}>
                   <Link
                     className="nav-link dropdown-toggle d-flex align-items-center gap-1"
                      to="/"
@@ -56,6 +56,7 @@ function Header() {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    style={{color:"white"}}
                   >
                    <FaUserSecret /> {auth?.user?.name.toUpperCase()}
                   </Link>
@@ -79,12 +80,12 @@ function Header() {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/signup">
+                  <NavLink className="nav-link" to="/signup"  style={{color:"white"}}>
                   <RiRegisteredFill /> REGISTER
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/signin">
+                  <NavLink className="nav-link" to="/signin"  style={{color:"white"}}>
                   <TbLogin /> LOGIN
                   </NavLink>
                 </li>
@@ -92,7 +93,7 @@ function Header() {
             )}
 
             <li className="nav-item">
-              <NavLink className="nav-link d-flex align-items-center gap-1" to="/cart">
+              <NavLink className="nav-link d-flex align-items-center gap-1" to="/cart"  style={{color:"white"}}>
               <FaCartArrowDown />  CART(0)
               </NavLink>
             </li>

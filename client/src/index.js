@@ -6,15 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext'
 import CategoryContext from './context/CategoryContext.js';
+import ProductContext from './context/ProductContext.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContext>
-        <CategoryContext>
-          <App />
-        </CategoryContext>
+        <ProductContext>
+          <CategoryContext>
+            <App />
+          </CategoryContext>
+        </ProductContext>
       </AuthContext>
     </BrowserRouter>
   </React.StrictMode>

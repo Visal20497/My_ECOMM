@@ -10,6 +10,7 @@ import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { IoIosCreate } from "react-icons/io";
+import useProduct from "../../hook/useProduct";
 
 function CreateProduct() {
     let [auth]=useAuth()
@@ -23,6 +24,7 @@ function CreateProduct() {
   let [description,setDescrition]=useState('')
   let [shipping,setShipping]=useState('')
   let [quantity,setQuantity]=useState('')
+  let {productChange,setProductChange}=useProduct()
   function categorySelector(value) {
     setCategory(value);
   }
@@ -55,8 +57,9 @@ function CreateProduct() {
         }
         let res= await axios.post('/api/v1/create-product',formData,{headers:{"Content-Type":"multipart/form-data",Authorization:auth.token,}})
         if(res.data.success)
-        {
+        {  
            toast(res.data.message)
+           setProductChange(! productChange)
            navigate('/dashboard/admin/products')
 
         }

@@ -19,7 +19,7 @@ function CreateCategory() {
     let [category, setCategory] = useState('')
 
     //this is for categorySlug
-    let [categoryId,setCategoryId]=useState('')
+    let [categoryId, setCategoryId] = useState('')
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     //this is for the delete handler
@@ -51,36 +51,38 @@ function CreateCategory() {
             let result = await axios.post(`/api/v1/create-category`, { name: category }, { headers: { "Authorization": auth?.token } })
             if (result.data.success) {
                 toast(result.data.message)
+                setCategory('')
+               
                 setChangeCategory(!changeCategory)
             } else {
                 toast(result.data.message)
             }
         }
-       catch (error) {
-        toast(error.message)
+        catch (error) {
+            toast(error.message)
+        }
     }
-}
-const handleOk=async()=>{
-    try {
-        let {data}=await axios.put(`/api/v1/update-category/${categoryId}`,{name:category},{headers:{"Authorization":auth?.token}})
-        if(data.success)
-        {
-            toast(data.message)
-            setChangeCategory(!changeCategory)
+    const handleOk = async () => {
+        try {
+            let { data } = await axios.put(`/api/v1/update-category/${categoryId}`, { name: category }, { headers: { "Authorization": auth?.token } })
+            if (data.success) {
+                toast(data.message)
+                setChangeCategory(!changeCategory)
+                setCategory('')
+            }
+            else {
+                toast(data.message)
+            }
+            setIsModalOpen(false)
+
+        } catch (error) {
+            toast(error.message)
+
         }
-        else{
-            toast(data.message)
-        }
+    }
+    const handleCancel = () => {
         setIsModalOpen(false)
-        
-    } catch (error) {
-        toast(error.message)
-        
     }
-}
-const handleCancel=()=>{
-    setIsModalOpen(false)
-}
 
 
 
@@ -88,16 +90,16 @@ const handleCancel=()=>{
     return (
         <Layout title={"Create Category -Ecomm"}>
             <div className="container">
-                <h1 className="text-center mt-3 mb-2"style={{color:"#a10a37"}}>Admin Dashboard</h1>
+                <h1 className="text-center mt-3 mb-2" style={{ color: "#a10a37" }}>Admin Dashboard</h1>
                 <div className="row">
                     <div className="col-md-3">
                         <AdminDashboardMenu />
                     </div>
                     <div className="col-md-9">
-                        <h4 className="text-center m-3" style={{color:"#429e50"}}>Manage Category</h4>
+                        <h4 className="text-center m-3" style={{ color: "#429e50" }}>Manage Category</h4>
                         <hr />
                         <CategoryForm category={category} setInputHandler={setInputHandler} sumbmitCategoryHandler={sumbmitCategoryHandler} />
-                    
+
                         {categories.length === 0 && <h1>loding....</h1>}
                         <table className="table">
                             <thead>
@@ -111,10 +113,9 @@ const handleCancel=()=>{
                                     <>
                                         {categories?.map((item, i) => {
                                             let { _id, name } = item
-                                            return <>
-                                                <tr key={i}>
-
-                                                    <td>{name}</td>
+                                            return <React.Fragment key={i}>
+                                                <tr key={i} >
+                                                    <td >{name}</td>
                                                     <td>
                                                         <button className="btn btn-primary" onClick={() => {
                                                             setIsModalOpen(true)
@@ -123,11 +124,10 @@ const handleCancel=()=>{
                                                         }}><CiEdit /> Edit</button>
                                                         <button className="btn btn-danger ms-3" onClick={() => {
                                                             deleteCategoryHandler(_id)
-                                                        }} ><MdDelete /> Delete</button>
+                                                        }} >Delete <MdDelete /></button>
                                                     </td>
-
                                                 </tr>
-                                            </>;
+                                            </React.Fragment>;
                                         })}
                                     </>
                                 )}

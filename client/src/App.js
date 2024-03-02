@@ -19,6 +19,8 @@ import CreateProduct from "./pages/admin/CreateProduct";
 import AllOrders from "./pages/admin/AllOrders";
 import Users from "./pages/admin/Users";
 import Products from "./pages/admin/Products.jsx";
+import DeatailsProduct from '../src/pages/DeatailsProduct.jsx';
+import UpdateProduct from "./pages/admin/UpdateProduct.jsx";
 function App() {
   return (
     <Routes>
@@ -29,6 +31,7 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forget-password" element={<ForgetPassword />} />
+      <Route path="/product-details/:id" element={<DeatailsProduct/>} />
 
       {/* //this is for the normal user */}
       <Route path="/dashboard" element={<ProtectedRoute />}>
@@ -44,9 +47,9 @@ function App() {
         <Route path="admin/create-product" element={<CreateProduct/>}/>
         <Route path="admin/products" element={<Products/>}/>
         <Route path="admin/all-orders" element={<AllOrders/>}/>
+        <Route path="admin/products/:id" element={<UpdateProduct/>}/>
         <Route path="admin/users" element={<Users/>}/>
       </Route>
-
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   );

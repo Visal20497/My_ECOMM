@@ -156,86 +156,27 @@ export let filterProductController=async(req,res)=>{
     res.status(500).send({message:"Somthing wrong while filtering",success:false,err})
   }
   let {price,category}=req.body
-
 }
-//this is for the finding total product 
-export let totalProductController=async(req,res)=>{
-  try{
-    let productCount=await productModel.find({}).estimatedDocumentCount();
+
+// this is for the finding the total product
+export let totalProductController=async (req,res)=>{
+  try {
+    let productCount=await productModel.find({}).estimatedDocumentCount()
     res.status(200).send({message:"Total Count",total:productCount,success:true})
-  }
-  catch(err)
-  {
-    console.log(err)
-    res.status(500).send({message:"Somthing wrong while finding total Length",success:false ,err})
+  } catch (error) {
+    res.status(500).send({message:"Something wrong while finding the total",success:false,error})
   }
 }
-//this is for the product list controller
+
+//this is for the product list 
 export let productListController=async(req,res)=>{
-  try
-  {
-    let {count}=req.params
-    console.log('dev test 1',count)
-    const page=count?req.params.count:1
-     let perPageContent=3
-     let products=await productModel.find({}).skip((page -1) * perPageContent).limit(perPageContent)
-     res.status(200).send({message:"Product Result",products,success:true})
-  }
-  catch(err)
-  {
-    console.log(err)
-    res.status(500).send({message:"somthing wrong while loading",success:false,err})
-  }
+try {
+  let {count}=req.params
+  const page=count?req.params.count:1
+  let perPageContent=3
+  let products=await productModel.find({}).skip((page -1) * perPageContent).limit(perPageContent)
+  res.status(200).send({message:"Product Result",products,success:true})
+} catch (error) {
+  res.status(500).send({message:"Something wrong while loading ",success:false,error})  
 }
-
-//this is for similar product
-export let similarProductController=async(req,res)=>{
-  try{
-    let {p_id,c_id}=req.params
-    let products=await productModel.find({
-      category:c_id,
-      _id:{$ne:p_id}
-    }).limit(3)
-    res.status(200).send({message:"Similar Product",products,success:true})
-  }
-  
-  catch(err)
-  {
-    console.log(err)
-    res.status(500).send({message:"Somthing wrong",err,success:false})
-  }
- 
-
-}
-
-//this is for serching
-export let serchHandlerController=async(req,res)=>{
-  try{
-    let {keyword}=req.params;
-    let products=await productModel.find({$or:[
-       {name:{$regex:keyword,$options:'i'}},
-       {description:{$regex:keyword,$options:"i"}}
-    ]})
-    res.status(200).send({message:"Result Found",products,success:true,total:products.count})
-    
-  }
-  catch(err)
-  {
-    console.log(err)
-    res.status(500).send({message:"Somthing wrong while searching",err,success:false})
-  }
-}
-//this is for productBycategory
-export let productCategoryController=async(req,res)=>{
-  let {slug}=req.params
-   try{
-     let category= await categoryModel.find({slug:slug})
-     let product=await productModel.find({category:category})
-     res.status(200).send({message:"Result Found",success:true,product,total:product.length})
-   }
-   catch(err)
-   {
-    console.log(err)
-    res.status(500).send({message:"somthing wrong while fetching",err,success:false})
-   }
 }

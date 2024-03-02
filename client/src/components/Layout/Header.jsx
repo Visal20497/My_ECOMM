@@ -10,6 +10,7 @@ import { IoLogOutSharp } from "react-icons/io5";
 import { RiRegisteredFill } from "react-icons/ri";
 import { TbLogin } from "react-icons/tb";
 import { AiFillBank } from "react-icons/ai";
+import Search from "../form/Search";
 
 function Header() {
   let [auth, setAuth] = useAuth();
@@ -23,6 +24,7 @@ function Header() {
         <Link className="navbar-brand d-flex align-items-center gap-2" to="/" style={{color:"white"}}>
         <AiFillBank />  My~Shop
         </Link>
+       <Search/>
         <button
           className="navbar-toggler"
           type="button"

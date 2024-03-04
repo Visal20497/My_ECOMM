@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { Badge } from "antd";
 import { AiFillHome } from "react-icons/ai";
 import { MdCategory } from "react-icons/md";
 import { FaUserSecret } from "react-icons/fa";
@@ -11,16 +12,21 @@ import { RiRegisteredFill } from "react-icons/ri";
 import { TbLogin } from "react-icons/tb";
 import { AiFillBank } from "react-icons/ai";
 import Search from "../form/Search";
+import useCategory from "../../hook/useCategory";
+import useCart from '../../hook/useCart.js'
 
 function Header() {
   let [auth, setAuth] = useAuth();
+  let [cart]=useCart()
+  let {categories}=useCategory()
   //function for logouthandler
   function logoutHandler() {
     setAuth({ user: "", token: null });
   }
+ 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light p-3" style={{backgroundColor:"#c6c995"}}>
-      <div className="container-fluid" >
+    <nav className="navbar navbar-expand-lg navbar-light p-3 fixed-top" style={{backgroundColor:"#c6c995"}}>
+      <div className="container-fluid " >
         <Link className="navbar-brand d-flex align-items-center gap-2" to="/" style={{color:"white"}}>
         <AiFillBank />  My~Shop
         </Link>
@@ -44,9 +50,38 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link d-flex align-items-center gap-1" to="/category"  style={{color:"white"}}>
-              <MdCategory /> CATEGORY
-              </NavLink>
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="/all-category"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{color:"white"}}
+                >
+                < MdCategory/>  Category
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item" to={"/all-category"}>
+                      All Category
+                    </Link>
+                  </li>
+                  {categories.map((item, i) => {
+                    return (
+                      <li key={i}>
+                        <Link
+                          className="dropdown-item"
+                          to={`/all-category/${item.slug}`}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
             </li>
             {auth?.token ? (
               <>
@@ -94,9 +129,14 @@ function Header() {
               </>
             )}
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link d-flex align-items-center gap-1" to="/cart"  style={{color:"white"}}>
               <FaCartArrowDown />  CART(0)
+              </NavLink>
+            </li> */}
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/cart">
+                <Badge count={cart.length} showZero > <div style={{color:"white",padding:"6px"}}> <FaCartArrowDown /></div> </Badge>
               </NavLink>
             </li>
           </ul>

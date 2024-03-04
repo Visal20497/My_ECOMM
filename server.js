@@ -7,6 +7,7 @@ import cors from 'cors'
 import authRoute from './route/authRoute.js'
 import categoryRoute from './route/createRoute.js'
 import productRoute from './route/productRoute.js'
+import orderRoute from './route/orderRoute.js'
 
 let app=express()
 // config
@@ -36,6 +37,8 @@ app.use('/api/v1',authRoute)
 app.use('/api/v1',categoryRoute)
 //Product Route
 app.use('/api/v1',productRoute)
+//order Route
+app.use('/api/v1',orderRoute)
 
 
 

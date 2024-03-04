@@ -1,88 +1,83 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
-import useCategory from '../hook/useCategory.js'
 import { Checkbox, Radio } from "antd";
+import useProduct from "../hook/useProduct";
+import useCategory from "../hook/useCategory";
+import { Price } from "../components/Price";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import AddToCart from "../components/form/AddToCart";
 import MoreDeatils from "../components/form/MoreDeatails";
-import AddToCart from "../components/form/AddToCart.jsx";
-import { Price } from "../components/Price.js";
-
-
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-  let { categories } = useCategory()
-  let navigate = useNavigate()
-  let [selectedCategory, setSelectedCategory] = useState([])
-  let [price, setPrice] = useState('')
-  let [filterData, setFilterData] = useState([])
-  let [limitProduct, setLimitProduct] = useState([])
-
+  let navigate=   useNavigate()
+  let [selectedCategory, setSelectedCategory] = useState([]);
+  let [price, setPrice] = useState("");
+  let { categories } = useCategory();
+  let [filterData, setFilterData] = useState([]);
+  let [limitProduct, setLimitProduct] = useState([]);
   //product count
-  let [productCount, setProductCount] = useState('')
+  let [productCount, setProductCount] = useState("");
+  //pageCount
+  let [pageCount, setPageCount] = useState(1);
 
-  //page Count
-  let [pageCount, setPageCount] = useState(1)
-
-
-  // this is for the handling the category
+  //this is for handling category
   function changeCategoryHandler(e, id) {
-    let all = [...selectedCategory]
-    let checked = e.target.value
+    let all = [...selectedCategory];
+    let checked = e.target.checked;
     if (checked) {
-      all.push(id)
+      all.push(id);
     } else {
       all = all.filter((data) => {
-        return data !== id
-      })
+        return data != id;
+      });
     }
-    setSelectedCategory([...all])
+    setSelectedCategory([...all]);
   }
-
-  // this is for the price  handler
+  //this is for price handler
   function priceHandler(e) {
-    setPrice(e.target.value)
+    setPrice(e.target.value);
   }
-
-  //this is for the filter the product 
-  async function filterHandler() {
-    let res = await axios.post('/api/v1/filter-product', { price, checked: selectedCategory })
-    setFilterData(res.data.products)
+  //this is filteration
+  async function filterHanlder() {
+    let res = await axios.post("/api/v1/filter-product", {
+      price,
+      checked: selectedCategory,
+    });
+    setFilterData(res.data.products);
   }
-  useEffect(() => {
-    filterHandler();
-  }, [price, selectedCategory]);
-
-  // this is for the total Count
-
+  //this is for totalCount
   async function totalCount() {
     try {
-      let { data } = await axios.get("/api/v1/totalProduct")
-      setProductCount(data.total)
-    } catch (error) {
-      console.log(error)
+      let { data } = await axios.get("/api/v1/totalProduct");
+      setProductCount(data.total);
+    } catch (err) {
+      console.log(err);
     }
   }
-  useEffect(() => {
-    totalCount()
-  }, [])
 
-  // this is for the prodcutList
+  //this is for product-list
   async function productList() {
-    let { data } = await axios.get(`/api/v1/product-list/${pageCount}`)
+    let { data } = await axios.get(`/api/v1/product-list/${pageCount}`);
+
     setLimitProduct([...data.products, ...limitProduct]);
   }
   useEffect(() => {
-    productList()
-  }, [pageCount])
-
-
-
-  // this is for the single pages Handler
-  function singlPageHandler(id) {
-    navigate(`/product-details/${id}`)
+    productList();
+  }, [pageCount]);
+  //this useEffect for total count
+  useEffect(() => {
+    totalCount();
+  }, []);
+  //this useEffect for filteration
+  useEffect(() => {
+    filterHanlder();
+  }, [price, selectedCategory]);
+  //this is for singlepageHandler
+  function singlPageHandler(id)
+  {
+       navigate(`/product-details/${id}`)
   }
-
 
   return (
     <Layout title="Best Offer -ecomm">
@@ -179,8 +174,8 @@ function HomePage() {
                             <p>{brand}</p>
                             <p>{price}</p>
                             <div className="action d-flex">
-                              <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler} />
-                              <AddToCart />
+                                 <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler}/>
+                                <AddToCart prod={item}/>
                             </div>
                           </div>
                         </div>

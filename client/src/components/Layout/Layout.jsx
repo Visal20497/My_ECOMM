@@ -14,8 +14,8 @@ function Layout({ children,description,keywords,author,title }) {
         <meta name="author" content={author} />
         <title>{title}</title>
       </Helmet>
-      <Header />
-      <main style={{ minHeight: "75vh" }}>{children}</main>
+      <Header  />
+      <main style={{ minHeight: "75vh" ,marginTop:"100px"}}>{children}</main>
       <Footer />
     </>
   );

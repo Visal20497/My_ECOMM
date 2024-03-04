@@ -1,5 +1,5 @@
 import React from 'react'
-import MoreDeatails from '../components/form/MoreDeatails'
+import MoreDeatils from '../components/form/MoreDeatails'
 import AddToCart from '../components/form/AddToCart'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function SimilarProduct({product}) {
          navigate(`/product-details/${id}`)
     }
     return (
-        <div className="container">
+        <div className="container mb-2">
             <div className="row d-flex justify-content-between">
                 {product.length===0 && <h4>loading...</h4>}
                 {product.length>0 && product.map((item)=>{
@@ -24,11 +24,13 @@ function SimilarProduct({product}) {
                                 <h6>{item?.name}</h6>
                                 <p>{item?.description}</p>
                                 <p>{item?.brand}</p>
-                                <MoreDeatails p_id={item._id} singlPageHandler={singlPageHandler}  />
+                               <div className='d-flex justify-content-center'>
+                               <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler}  />
                                 {/* <button className="btn btn-primary" onClick={()=>{
                                     singlePageHandler(item._id)
                                 }}>MORE DETAILS</button> */}
-                                <AddToCart/>
+                                <AddToCart prod={item}/>
+                               </div>
                             </div>
                         </div>
                     </div>

@@ -5,13 +5,15 @@ import {
 } from "../helper/cloudinaryHelper.js";
 import productModel from "../model/productModel.js";
 import categoryModel from "../model/categoryModel.js";
+import gateway from "../config/payment.js";
+import orderModel from '../model/oderModel.js'
 //this is for product creation
 export let createProductController = async (req, res) => {
   try {
     let { name, price, quantity, description, category, brand, shipping } =
       req.body;
     let images = req.files;
-  
+
     if (
       !name ||
       !price ||
@@ -71,7 +73,7 @@ export let getAllProductController = async (req, res) => {
 export let getSingleProductController = async (req, res) => {
   try {
     let { id } = req.params;
-    let product = await productModel.findOne({_id:id }).populate('category');
+    let product = await productModel.findOne({ _id: id }).populate('category');
     res.status(200).send({ message: "Result", product, success: true });
   } catch (err) {
     console.log(err);
@@ -99,9 +101,9 @@ export let deleteProductController = async (req, res) => {
 export let updateProductController = async (req, res) => {
   try {
     let { name, price, quantity, description, category, brand, shipping } =
-    req.body;
+      req.body;
     let { id } = req.params;
-   
+
     if (
       !name ||
       !price ||
@@ -115,14 +117,13 @@ export let updateProductController = async (req, res) => {
     } else {
       let findData = await productModel.findOne({ _id: id });
       let image
-      if(req.files.length>0)
-      {
+      if (req.files.length > 0) {
         await deleteImageOnCloudinary(findData.images)
-         image = await uploadImageOnCloudinary(req.files);
+        image = await uploadImageOnCloudinary(req.files);
       }
       let product = await productModel.findByIdAndUpdate(
         { _id: id },
-        { ...req.body,images:image?image:findData.images },
+        { ...req.body, images: image ? image : findData.images },
         { new: true }
       );
       res.status(200).send({
@@ -140,43 +141,149 @@ export let updateProductController = async (req, res) => {
 };
 
 //this is for filter product controller
-export let filterProductController=async(req,res)=>{
-  try{
-        let {price,checked}=req.body
-        let args={}
-        if(checked.length>0) args.category=checked
-        if(price) args.price={$gte:price[0],$lte:price[1]}
-        const products=await productModel.find(args)
-        res.status(200).send({message:"All Filter Data",products,success:true})
+export let filterProductController = async (req, res) => {
+  try {
+    let { price, checked } = req.body
+    let args = {}
+    if (checked.length > 0) args.category = checked
+    if (price) args.price = { $gte: price[0], $lte: price[1] }
+    const products = await productModel.find(args)
+    res.status(200).send({ message: "All Filter Data", products, success: true })
 
   }
-  catch(err)
-  {
+  catch (err) {
     console.log(err)
-    res.status(500).send({message:"Somthing wrong while filtering",success:false,err})
+    res.status(500).send({ message: "Somthing wrong while filtering", success: false, err })
   }
-  let {price,category}=req.body
+  let { price, category } = req.body
 }
 
 // this is for the finding the total product
-export let totalProductController=async (req,res)=>{
+export let totalProductController = async (req, res) => {
   try {
-    let productCount=await productModel.find({}).estimatedDocumentCount()
-    res.status(200).send({message:"Total Count",total:productCount,success:true})
+    let productCount = await productModel.find({}).estimatedDocumentCount()
+    res.status(200).send({ message: "Total Count", total: productCount, success: true })
   } catch (error) {
-    res.status(500).send({message:"Something wrong while finding the total",success:false,error})
+    res.status(500).send({ message: "Something wrong while finding the total", success: false, error })
   }
 }
 
 //this is for the product list 
-export let productListController=async(req,res)=>{
-try {
-  let {count}=req.params
-  const page=count?req.params.count:1
-  let perPageContent=3
-  let products=await productModel.find({}).skip((page -1) * perPageContent).limit(perPageContent)
-  res.status(200).send({message:"Product Result",products,success:true})
-} catch (error) {
-  res.status(500).send({message:"Something wrong while loading ",success:false,error})  
+export let productListController = async (req, res) => {
+  try {
+    let { count } = req.params
+    const page = count ? req.params.count : 1
+    let perPageContent = 3
+    let products = await productModel.find({}).skip((page - 1) * perPageContent).limit(perPageContent)
+    res.status(200).send({ message: "Product Result", products, success: true })
+  } catch (error) {
+    res.status(500).send({ message: "Something wrong while loading ", success: false, error })
+  }
 }
+
+
+//this is for the searching
+export let serchHandlerController = async (req, res) => {
+  try {
+    let { keyword } = req.params;
+    let products = await productModel.find({
+      $or: [{ name: { $regex: keyword, $options: "i" } },
+      { description: { $regex: keyword, $options: "i" } },],
+    });
+    res
+      .status(200)
+      .send({
+        message: "Result Found",
+        products,
+        success: true,
+        total: products.count,
+      });
+  } catch (err) {
+    console.log(err);
+    res
+      .status(500)
+      .send({ message: "Somthing wrong while searching", err, success: false });
+  }
+};
+
+// this is for the similar product
+export let similarProductController = async (req, res) => {
+  try {
+    let { p_id, c_id } = req.params
+    let products = await productModel
+      .find({
+        category: c_id,
+        _id: { $ne: p_id },
+      })
+      .limit(3);
+    res.status(200).send({ message: "Similar Product", products, success: true });
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({ message: "Something wrong in simailar product ", success: false, error })
+  }
 }
+
+// this is for the product category controller
+export let productCategoryController = async (req, res) => {
+  try {
+    let { slug } = req.params
+    let category = await categoryModel.find({ slug })
+    let product = await productModel.find({ category })
+    res.status(200).send({ message: "Find the category", success: true, product, total: product.length })
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({ message: "Something wrong while getting the category", success: false, error })
+  }
+}
+// this is for the braintree
+export let braintreeTokenController = async (req, res) => {
+  try {
+    gateway.clientToken.generate({}, function (err, response) {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).send(response);
+      }
+    });
+  } catch (err) {
+    console.log(err);
+    res
+      .status(500)
+      .send({ message: "Somthing wrong while payment", err, success: false });
+  }
+};
+
+// this for the braintree payment
+export let braintreePaymentController = async (req, res) => {
+  try {
+    let { nonce, cart } = req.body;
+    let total_ammount = cart.reduce((acc, item) => {
+      return acc + item.price;
+    }, 0);
+    gateway.transaction.sale(
+      {
+        amount: total_ammount,
+        paymentMethodNonce: nonce,
+        options: {
+          submitForSettlement: true,
+        },
+      },
+      function (error, result) {
+        if (result) {
+          const order = new orderModel({
+            products: cart,
+            payment: result,
+            buyer: req.user._id,
+          }).save();
+          res.json({ ok: true });
+        } else {
+          res.status(500).send(error);
+        }
+      }
+    );
+  } catch (err) {
+    res
+      .status(500)
+      .send({ success: false, message: "somthing wrong while payment", err });
+  }
+};

@@ -1,5 +1,5 @@
 import express from "express";
-import { loginController, registerController, restPasswordHandler } from "../contorller/authController.js";
+import { loginController, profileUpdateController, registerController, restPasswordHandler } from "../contorller/authController.js";
 import { isAdmin, isRequire } from "../middleware/authMiddleware.js";
 let route = express.Router()
 //Register || POST
@@ -19,5 +19,8 @@ route.post('/reset-password', restPasswordHandler)
 route.get("/admin-auth-route", isRequire, isAdmin, (req, res) => {
     res.send({ ok: true })
 })
+
+//update user || put
+route.put('/profile-update',isRequire,profileUpdateController)
 
 export default route;

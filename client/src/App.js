@@ -21,6 +21,10 @@ import Users from "./pages/admin/Users";
 import Products from "./pages/admin/Products.jsx";
 import DeatailsProduct from '../src/pages/DeatailsProduct.jsx';
 import UpdateProduct from "./pages/admin/UpdateProduct.jsx";
+import SearchPage from "./pages/SearchPage.jsx";
+import CategoryPage from "./pages/CategoryPage.jsx";
+import AllCategory from "./pages/AllCategory.jsx";
+import Checkout from "./pages/Checkout.jsx";
 function App() {
   return (
     <Routes>
@@ -30,8 +34,13 @@ function App() {
       <Route path="/policy" element={<Policy />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/search" element={<SearchPage/>}/>
       <Route path="/forget-password" element={<ForgetPassword />} />
+      <Route path="/all-category" element={<AllCategory/>} />
+      <Route path="/all-category/:slug" element={<CategoryPage/>} />
       <Route path="/product-details/:id" element={<DeatailsProduct/>} />
+      <Route path="/cart" element={<Checkout/>}/>
+
 
       {/* //this is for the normal user */}
       <Route path="/dashboard" element={<ProtectedRoute />}>

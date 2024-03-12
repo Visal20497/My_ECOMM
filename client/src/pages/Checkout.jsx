@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { FaIndianRupeeSign } from "react-icons/fa6";
 
 function Checkout() {
   let [auth] = useAuth();
@@ -78,7 +79,7 @@ function Checkout() {
                     className="d-flex  align-items-center p-3 mt-3"
                     mb-3
                   >
-                    <div className="col-md-5">
+                    <div className="col-md-5 m-3">
                       <img
                         src={item?.images[0]?.url}
                         alt={item?.images[0]?.url}
@@ -87,7 +88,7 @@ function Checkout() {
                     </div>
                     <div className="col-md-7 ">
                       <h6>{item?.name}</h6>
-                      <p>{item?.description}</p>
+                      <p style={{width:"300px"}}>{item?.description}</p>
                       <p>Price:{item?.price}</p>
                       <button className="btn btn-danger" onClick={()=>{
                         DeleteHandler(item._id)
@@ -102,7 +103,7 @@ function Checkout() {
             <h4 className="text-center m-2">Cart Summary</h4>
             <p className="text-center"> Total | Checkout | Payment</p>
             <hr />
-            <h5 className="text-center">Total: {totalPriceHandler()}</h5>
+            <h5 className="text-center">Total:{totalPriceHandler?<FaIndianRupeeSign />:''}{totalPriceHandler()}</h5>
             <div className="d-flex justify-content-center mt-3 mb-3">
               {!auth?.token && (
                 <button className="btn btn-warning " onClick={loginHandler}>

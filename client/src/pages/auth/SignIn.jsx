@@ -79,9 +79,11 @@ function SignIn() {
               >
                 Login
               </button>
+              <Link to='/otp'><button className="btn btn-info ms-2" >LogIn By Otp</button></Link>
+              
               <hr />
               <div>
-                <Link to="/forget-password">Forget Password</Link>
+                <Link to="/forget-password" >Forget Password</Link>
               </div>
             </form>
           </div>

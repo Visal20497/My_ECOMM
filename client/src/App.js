@@ -25,6 +25,8 @@ import SearchPage from "./pages/SearchPage.jsx";
 import CategoryPage from "./pages/CategoryPage.jsx";
 import AllCategory from "./pages/AllCategory.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import SignInByOtp from './pages/auth/SignInByOtp.jsx'
+
 function App() {
   return (
     <Routes>
@@ -40,6 +42,7 @@ function App() {
       <Route path="/all-category/:slug" element={<CategoryPage/>} />
       <Route path="/product-details/:id" element={<DeatailsProduct/>} />
       <Route path="/cart" element={<Checkout/>}/>
+      <Route path='/otp' element={<SignInByOtp/>}/>
 
 
       {/* //this is for the normal user */}

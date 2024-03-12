@@ -4,9 +4,15 @@ import AdminDashboardMenu from '../../components/AdminDashboardMenu'
 import { Card } from "antd";
 import { useAuth } from '../../context/AuthContext';
 import QRCode from 'qrcode.react';
+import { CiEdit } from "react-icons/ci";
+import { Button, Modal } from 'antd';
 
 function AdminDashboard() {
   let [auth, setAuth] = useAuth()
+  const [name,setName]=useState(auth?.user?.name)
+  const [address,setAddress]=useState(auth?.user?.address)
+  const [phone,setPhone]=useState(auth?.user?.phone)
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [userDetails,setUserDetails] =useState (JSON.stringify({
     Name: auth?.user?.name,
     address: auth?.user?.address,
@@ -16,6 +22,15 @@ function AdminDashboard() {
   useEffect(()=>{
        setQRCodevalue(userDetails)
   },[userDetails])
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <Layout>
       <div className="container">
@@ -34,8 +49,22 @@ function AdminDashboard() {
               <h6>Name : {auth.user?.name}</h6>
               <h6>Address : {auth.user?.address}</h6>
               <h6>Mobile No : {auth.user?.phone}</h6>
-              <button className='btn btn-primary'>Edit Details</button><br/>
-             
+              <Button type="primary" onClick={showModal}>
+              <CiEdit />  Edit Details
+      </Button>
+      <Modal title="Admin Profile" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+       <div className='d-flex  flex-column'>
+       <input type="text" className='form-control m-2' placeholder='Enter your Name...'value={name} onChange={(e)=>{
+        setName(e.target.vlaue)
+       }}/>
+        <input type="text" className='form-control m-2'placeholder='Enter your Address...' value={address} onChange={(e)=>{
+          setAddress(e.target.value)
+        }}/>
+        <input type="text"className='form-control m-2' placeholder='Enter your MobileNo...'value={phone} onChange={(e)=>{
+          setPhone(e.target.value)
+        }}/>
+       </div>
+      </Modal>
             </Card>
           </div>
            <div className="col-md-3">

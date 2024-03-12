@@ -6,17 +6,36 @@ import { FaProductHunt } from "react-icons/fa";
 import { FaBorderAll } from "react-icons/fa";
 
 function AdminDashboardMenu() {
-  let navStyle = { textDecoration: "none" }
-
+  let navStyle = { textDecoration: "none" };
 
   return (
     <>
       <ul className="list-group">
-        <Link style={navStyle} to={"/dashboard/admin/create-category"}><li className="list-group-item"><MdCategory />  Create Category</li></Link>
-        <Link style={navStyle} to={"/dashboard/admin/create-product"}> <li className="list-group-item"><FaProductHunt />  Create Product</li> </Link>
-        <Link style={navStyle} to={"/dashboard/admin/products"}> <li className="list-group-item"><FaProductHunt />  Products</li> </Link>
-        <Link style={navStyle} to={"/dashboard/admin/users"}> <li className="list-group-item"><FaUserShield />  Users</li> </Link>
-        <Link style={navStyle} to={"/dashboard/admin/all-orders"}> <li className="list-group-item"><FaBorderAll />  Orders</li> </Link>
+        <Link style={navStyle} to={"/dashboard/admin/create-category"}>
+          <li className="list-group-item list-group-item-action">
+            <MdCategory /> Create Category
+          </li>
+        </Link>
+        <Link style={navStyle} to={"/dashboard/admin/create-product"}>
+          <li className="list-group-item list-group-item-action">
+            <FaProductHunt /> Create Product
+          </li>
+        </Link>
+        <Link style={navStyle} to={"/dashboard/admin/products"}>
+          <li className="list-group-item list-group-item-action">
+            <FaProductHunt /> Products
+          </li>
+        </Link>
+        <Link style={navStyle} to={"/dashboard/admin/users"}>
+          <li className="list-group-item list-group-item-action">
+            <FaUserShield /> Users
+          </li>
+        </Link>
+        <Link style={navStyle} to={"/dashboard/admin/all-orders"}>
+          <li className="list-group-item list-group-item-action">
+            <FaBorderAll /> Orders
+          </li>
+        </Link>
       </ul>
     </>
   );

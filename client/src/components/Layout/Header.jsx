@@ -14,6 +14,8 @@ import { AiFillBank } from "react-icons/ai";
 import Search from "../form/Search";
 import useCategory from "../../hook/useCategory";
 import useCart from '../../hook/useCart.js'
+import '../../index.css'
+
 
 function Header() {
   let [auth, setAuth] = useAuth();
@@ -24,10 +26,11 @@ function Header() {
     setAuth({ user: "", token: null });
   }
  
+ 
   return (
     <nav className="navbar navbar-expand-lg navbar-light p-3 fixed-top" style={{backgroundColor:"#c6c995"}}>
       <div className="container-fluid " >
-        <Link className="navbar-brand d-flex align-items-center gap-2" to="/" style={{color:"white"}}>
+        <Link className="navbar-brand d-flex align-items-center gap-2 new-navbar" to="/" style={{color:"white"}}>
         <AiFillBank />  My~Shop
         </Link>
        <Search/>
@@ -45,14 +48,14 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent" >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0" >
             <li className="nav-item">
-              <Link className="nav-link active d-flex align-items-center gap-1" aria-current="page" to="/" style={{color:"white"}} >
+              <Link className="nav-link  d-flex align-items-center gap-1 new-navbar"  aria-current="page" to="/" style={{color:"white"}} >
               <AiFillHome />  Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item ">
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle new-navbar"
                   to="/all-category"
                   id="navbarDropdown"
                   role="button"
@@ -87,7 +90,7 @@ function Header() {
               <>
                 <li className="nav-item dropdown"  style={{color:"white"}}>
                   <Link
-                    className="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                    className="nav-link dropdown-toggle d-flex align-items-center gap-1 new-navbar"
                      to="/"
                     id="navbarDropdown"
                     role="button"
@@ -102,12 +105,12 @@ function Header() {
                     aria-labelledby="navbarDropdown"
                   >
                     <li>
-                      <Link className="dropdown-item" to={auth.user.role===true?"/dashboard/admin":"/dashboard/user"}>
+                      <Link className="dropdown-item " to={auth.user.role===true?"/dashboard/admin":"/dashboard/user"}>
                       <MdDashboard /> DASHBOARD
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="dropdown-item" onClick={logoutHandler}>
+                      <Link className="dropdown-item new-navbar" onClick={logoutHandler}>
                       <IoLogOutSharp />  LOGOUT
                       </Link>
                     </li>
@@ -117,12 +120,12 @@ function Header() {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/signup"  style={{color:"white"}}>
+                  <NavLink className="nav-link new-navbar" to="/signup"  style={{color:"white"}}>
                   <RiRegisteredFill /> REGISTER
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/signin"  style={{color:"white"}}>
+                  <NavLink className="nav-link new-navbar" to="/signin"  style={{color:"white"}}>
                   <TbLogin /> LOGIN
                   </NavLink>
                 </li>
@@ -135,7 +138,7 @@ function Header() {
               </NavLink>
             </li> */}
             <li className="nav-item">
-              <NavLink className="nav-link" to="/cart">
+              <NavLink className="nav-link new-navbar" to="/cart">
                 <Badge count={cart.length} showZero > <div style={{color:"white",padding:"6px"}}> <FaCartArrowDown /></div> </Badge>
               </NavLink>
             </li>

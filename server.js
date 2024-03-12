@@ -8,6 +8,7 @@ import authRoute from './route/authRoute.js'
 import categoryRoute from './route/createRoute.js'
 import productRoute from './route/productRoute.js'
 import orderRoute from './route/orderRoute.js'
+import otpRoute from './route/otpRoute.js'
 
 let app=express()
 // config
@@ -39,6 +40,8 @@ app.use('/api/v1',categoryRoute)
 app.use('/api/v1',productRoute)
 //order Route
 app.use('/api/v1',orderRoute)
+//otp Route
+app.use('/api/v1',otpRoute)
 
 
 

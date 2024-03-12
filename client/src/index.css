@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:ital,wght@1,300&display=swap');
 body {
   margin:0;
   padding:0;
+} 
+.new-navbar:hover{
+    color:#403f2f !important; 
+    background-color: #dbdac1;
+    border-radius:5%;
 }
-
-
+.new-navbar2:hover{
+  color:#403f2f !important; 
+  
+  border-radius:5%;
+}

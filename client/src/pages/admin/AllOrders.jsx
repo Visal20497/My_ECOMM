@@ -10,14 +10,13 @@ function AllOrders() {
   let [auth] = useAuth();
   let [orders, setOrders] = useState([]);
   let enums = ["Not Process", "Processing", "Shipped", "Delivered", "Cancel"];
-  let [status,setStatus]=useState(false)
+  let [status, setStatus] = useState(false)
   async function getOrder() {
     try {
       let { data } = await axios("/api/v1/all-order", {
         headers: { Authorization: auth.token },
       });
       if (data.success) {
-        console.log(data.orders);
         setOrders(data.orders);
       } else {
         toast(data.message);
@@ -29,21 +28,19 @@ function AllOrders() {
     }
   }
   //this is for handling status
-  async function statusHandler(value,id) {
-    try{
-      let {data}= await axios.put(`/api/v1/update-order/${id}`,{status:value},{headers:{"Authorization":auth.token}})
-     if(data.success)
-     {
-      toast(data.message)
-      setStatus(!status)
-     }
-     else{
-      toast(data.message)
-     }
+  async function statusHandler(value, id) {
+    try {
+      let { data } = await axios.put(`/api/v1/update-order/${id}`, { status: value }, { headers: { "Authorization": auth.token } })
+      if (data.success) {
+        toast(data.message)
+        setStatus(!status)
+      }
+      else {
+        toast(data.message)
+      }
     }
-    catch(err)
-    {
-     toast(err.message)
+    catch (err) {
+      toast(err.message)
     }
   }
   useEffect(() => {
@@ -52,7 +49,8 @@ function AllOrders() {
   return (
     <Layout title={"All Order -Ecomm"}>
       <div className="container">
-        <h1 className="text-center m-3">All Orders</h1>
+        <h1 className="text-center mt-3 mb-2" style={{ color: "#a10a37" }}>Admin Dashboard</h1>
+        <h4 className="text-center m-3">All Orders</h4>
         <div className="row">
           <div className="col-md-3">
             <AdminDashboardMenu />
@@ -84,8 +82,8 @@ function AllOrders() {
                               style={{ width: "100px" }}
                               value={item.status}
                               showSearch
-                              onChange={(e)=>{
-                                statusHandler(e,item._id)
+                              onChange={(e) => {
+                                statusHandler(e, item._id)
                               }}
                             >
                               {enums?.map((item) => {
@@ -100,21 +98,19 @@ function AllOrders() {
                         </tr>
                         <tr>
                           <td>
-                            <div className="container">
+                            <div className="container d-flex justify-content-evenly">
                               {item?.products?.map((item, i) => {
                                 return (
                                   <div
                                     className="row m-2"
                                     style={{ border: "1px solid black" }}
                                   >
-                                    <div className="col-md-6">
+                                    <div className="col  ">
                                       <img
                                         src={item?.images[0]?.url}
                                         alt={item?.images[0]?.url}
                                         className="img-fluid"
                                       />
-                                    </div>
-                                    <div className="col-md-6">
                                       <h6>{item?.name}</h6>
                                       <p>{item?.description}</p>
                                       <p>Price:{item?.price}</p>

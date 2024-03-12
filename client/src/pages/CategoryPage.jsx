@@ -44,7 +44,7 @@ function CategoryPage() {
                                 </div>
                                 <h6>{item?.name}</h6>
                                 <p>{item?.description}</p>
-                                <p>{item?.brand}</p>
+                                <p><strong>Brand :</strong> {item?.brand}</p>
                                 <div className="d-flex">
                                 <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler}  />
                                <AddToCart prod={item}/>

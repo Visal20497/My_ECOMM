@@ -66,20 +66,18 @@ function Order() {
                         </tr>
                         <tr>
                             <td>
-                        <div className="container">
+                        <div className="container d-flex justify-content-evenly">
                           {item?.products?.map((item, i) => {
                             return (
-                              <div className="row m-2" style={{border:"1px solid black"}}>
-                                <div className="col-md-6">
+                              <div className="row m-2 d-flex justify-content-evenly" style={{border:"1px solid black"}}>
+                                <div className="col-md-12" >
                                   <img
                                     src={item?.images[0]?.url}
                                     alt={item?.images[0]?.url}
                                     className="img-fluid"
                                   />
-                                </div>
-                                <div className="col-md-6">
                                   <h6>{item?.name}</h6>
-                                  <p>{item?.description}</p>
+                                  {/* <p>{item?.description}</p> */}
                                   <p>Price:{item?.price}</p>
                                 </div>
                               </div>

@@ -7,8 +7,8 @@ function UserDashboardMenu() {
   return (
     <>
       <ul className="list-group">
-       <Link style={navStyle} to={"/dashboard/user/order"}><li className="list-group-item">Orders</li></Link> 
-        <Link style={navStyle} to={"/dashboard/user/profile"}> <li className="list-group-item">Profile</li> </Link> 
+       <Link style={navStyle} to={"/dashboard/user/order"}><li className="list-group-item list-group-item-action">Orders</li></Link> 
+        <Link style={navStyle} to={"/dashboard/user/profile"}> <li className="list-group-item list-group-item-action">Profile</li> </Link> 
       </ul>
     </>
   );

@@ -48,15 +48,15 @@ function Profile() {
   }, []);
   return (
     <Layout title={"Update Profile -ecom"}>
-      <div className="container">
-        <div className="row">
+      <div className="container ">
+      <h1 className="text-center m-3">Update Profile</h1>
+        <div className="row ">
           <div className="col-md-3">
             <UserDashboardMenu />
           </div>
 
           <>
               <div className="col-md-9">
-                <h4 className="text-center m-3">Update Profile</h4>
                 <hr />
                 <div className="mt-4">
                   <input

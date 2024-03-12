@@ -13,7 +13,7 @@ function SimilarProduct({product}) {
     return (
         <div className="container mb-2">
             <div className="row d-flex justify-content-between">
-                {product.length===0 && <h4>loading...</h4>}
+                {product.length===0 && <h4>NO Similar Product Found...</h4>}
                 {product.length>0 && product.map((item)=>{
                     return <div className="col-md-3">
                         <div className="card">

@@ -27,7 +27,7 @@ function Search() {
         navigation('/search')
       }
       else{
-        toast(data.message)
+         toast(data.message)
         return
       }
       
@@ -42,7 +42,7 @@ function Search() {
       <nav className="navbar">
   <div className="container-fluid">
     <form className="d-flex" >
-      <input className="form-control me-2"value={search.keyword} onChange={searchHandler} type="search" placeholder="Search" aria-label="Search" />
+      <input className="form-control me-2"value={search.keyword} onChange={searchHandler} type="search" placeholder="Search..." aria-label="Search" />
       <button className="btn btn-outline-success" onClick={searchSubmitHandler}>Search</button>
     </form>
   </div>

@@ -5,6 +5,7 @@ import toast from 'react-hot-toast'
 import axios from 'axios'
 import MoreDeatils from '../components/form/MoreDeatails'
 import AddToCart from '../components/form/AddToCart'
+import { Flex, Spin } from "antd";
 
 function CategoryPage() {
     let {slug}=useParams()
@@ -34,7 +35,11 @@ function CategoryPage() {
       <Layout title={"Category Page:Ecom"}>
         <div className="container m-3">
             <div className="row d-flex justify-content-evenly">
-            {product.length===0 && <h4>loading...</h4>}
+            {product.length===0 && <Flex gap="small" vertical>
+          <Spin tip="Loading" size="large">
+            <div className="content" />
+          </Spin>
+        </Flex>}
                 {product.length>0 && product.map((item)=>{
                     return <div className="col-md-3">
                         <div className="card">

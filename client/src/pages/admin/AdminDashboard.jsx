@@ -6,6 +6,8 @@ import { useAuth } from '../../context/AuthContext';
 import QRCode from 'qrcode.react';
 import { CiEdit } from "react-icons/ci";
 import { Button, Modal } from 'antd';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 function AdminDashboard() {
   let [auth, setAuth] = useAuth()
@@ -18,18 +20,43 @@ function AdminDashboard() {
     address: auth?.user?.address,
     Mobile: auth?.user?.phone
   }))
-  let [qrCodevalue,setQRCodevalue]=useState('')
-  useEffect(()=>{
-       setQRCodevalue(userDetails)
-  },[userDetails])
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
+ 
+  const handleOk =async () => {
+    
+    try {
+      let details={name,address,phone,email:auth?.user?.email}
+      console.log(details)
+      let {data}=await axios.put(`/api/v1/user-update`,details,{headers:{Authorization:auth?.token}})
+      if(data.success){
+        setIsModalOpen(false);
+        toast(data.message)
+        setAuth(prevState => ({
+          ...prevState,
+          user: {
+            ...prevState.user,
+            name: name,
+            address: address,
+            phone: phone
+          }
+        }))
+      }
+      else{
+        toast(data.message)
+        setIsModalOpen(false);
+      }
+    } catch (error) {
+      toast("Something worng while updating")
+    }
   };
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+  let [qrCodevalue,setQRCodevalue]=useState('')
+  useEffect(()=>{
+       setQRCodevalue(userDetails)
+  },[auth,handleOk])
+  const showModal = () => {
+    setIsModalOpen(true);
   };
   return (
     <Layout>
@@ -55,7 +82,7 @@ function AdminDashboard() {
       <Modal title="Admin Profile" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
        <div className='d-flex  flex-column'>
        <input type="text" className='form-control m-2' placeholder='Enter your Name...'value={name} onChange={(e)=>{
-        setName(e.target.vlaue)
+        setName(e.target.value)
        }}/>
         <input type="text" className='form-control m-2'placeholder='Enter your Address...' value={address} onChange={(e)=>{
           setAddress(e.target.value)

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 
 function Box({ search }) {
     let [auth, setAuth] = useAuth()
@@ -46,9 +47,31 @@ function Box({ search }) {
     useEffect(() => {
         inputRefs.current[0].focus()
     }, [])
+    
+        const [seconds, setSeconds] = useState(60);
+        const [isActive, setIsActive] = useState(true);
+        useEffect(() => {
+          let interval;
+          if (isActive && seconds > 0) {
+            interval = setInterval(() => {
+              setSeconds((prevSeconds) => prevSeconds - 1);
+            }, 1000); // Update every second
+          } else if (seconds === 0) {
+            clearInterval(interval);
+            setIsActive(false);
+            navigate('/otp')
+          }
+          return () => clearInterval(interval);
+        }, [isActive, seconds]);  
+        const formatTime = (time) => {
+          const minutes = Math.floor(time / 60);
+          const seconds = time % 60;
+          return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        };
     return (
         <React.Fragment>
-        <div className='container d-flex justify-content-center align-items-center' style={{ minHeight: '100vh' }}>
+       <Layout title='login -Ecom'>
+       <div className='container d-flex justify-content-center align-items-center' style={{ minHeight: '100vh' }}>
             <div className="row">
                    
                 <div className="col-md-12 d-flex justify-content-center gap-2">
@@ -66,10 +89,14 @@ function Box({ search }) {
                             }}
                         />
                     })}
+                 
                 </div>
-                <button className='btn btn-primary' style={{width:"150px",margin:"15px",marginLeft:"380px"}} onClick={submitHandler}>submit</button>
+                
+                <h4 className='text-center'>OTP Expire In :{formatTime(seconds)}</h4>
+                <button className='btn btn-primary' style={{width:"150px",margin:"15px",marginLeft:"500px"}} onClick={submitHandler}>submit</button>
             </div>
         </div>
+       </Layout>
     </React.Fragment>
     
     )

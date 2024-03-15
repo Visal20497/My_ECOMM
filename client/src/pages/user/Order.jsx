@@ -31,7 +31,7 @@ function Order() {
   return (
     <Layout title={"All Order -Ecomm"}>
       <div className="container">
-        <h1 className="text-center m-3">All Orders</h1>
+        <h1 className="text-center m-3"style={{color:"#c91c67"}}>All Orders</h1>
         <div className="row">
           <div className="col-md-3">
             <UserDashboardMenu />

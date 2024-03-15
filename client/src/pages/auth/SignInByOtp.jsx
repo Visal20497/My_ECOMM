@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Box from "./Box";
 import Layout from "../../components/Layout/Layout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 
 function OtpSystem() {
   let [search, setSearch] = useState();
   let [flag, setFlag] = useState(false);
+  let nevigate=useNavigate()
   async function verifyHandler(e) {
     e.preventDefault()
     try {
@@ -19,6 +20,8 @@ function OtpSystem() {
             if(data.success){
                 toast(data.message)
                 setFlag(true)
+                nevigate('/box')
+                
             }
         }
     } catch (error) {
@@ -54,7 +57,7 @@ function OtpSystem() {
                 className="btn btn-primary" >
                 Login By Password
               </button></Link>
-              <button className='btn btn-info ms-2' onClick={verifyHandler} >Verify OTP</button>
+              <button className='btn btn-info ms-2' style={{display:flag?"none":"inline"}} onClick={verifyHandler} >Verify OTP</button>
               <hr />
             </form>
           </div>

@@ -10,6 +10,8 @@ import { UploadOutlined } from "@ant-design/icons";
 import { useAuth } from "../../context/AuthContext";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 function UpdateProduct() {
   let { id } = useParams();
@@ -241,13 +243,13 @@ function UpdateProduct() {
                       className="btn btn-primary "
                       onClick={updateProductHandler}
                     >
-                      Update Product
+                    <FaEdit />  Update Product
                     </button>
                     <button
                       className="btn btn-danger ms-2"
                       onClick={deleteProductHandler}
                     >
-                      Delete Product
+                     Delete Product  <MdDelete />
                     </button>
                   </div>
                 </div>

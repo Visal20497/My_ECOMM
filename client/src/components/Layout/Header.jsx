@@ -10,11 +10,11 @@ import { MdDashboard } from "react-icons/md";
 import { IoLogOutSharp } from "react-icons/io5";
 import { RiRegisteredFill } from "react-icons/ri";
 import { TbLogin } from "react-icons/tb";
-import { AiFillBank } from "react-icons/ai";
 import Search from "../form/Search";
 import useCategory from "../../hook/useCategory";
 import useCart from '../../hook/useCart.js'
 import '../../index.css'
+import { BiLogoVenmo } from "react-icons/bi";
 
 
 function Header() {
@@ -30,8 +30,8 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light p-3 fixed-top" style={{backgroundColor:"#c6c995"}}>
       <div className="container-fluid " >
-        <Link className="navbar-brand d-flex align-items-center gap-2 new-navbar" to="/" style={{color:"white"}}>
-        <AiFillBank />  My~Shop
+        <Link className="navbar-brand d-flex align-items-center gap-2 new-navbar3" to="/" style={{color:"#3d593b",fontSize:"23px"}}>
+        <BiLogoVenmo />  Vishal~Mart
         </Link>
        <Search/>
         <button

@@ -1,5 +1,5 @@
 import express from "express";
-import { findAllUserContorlller, loginController, profileUpdateController, registerController, restPasswordHandler, userRoleContorller } from "../contorller/authController.js";
+import { findAllUserContorlller, loginController, profileUpdateController, registerController, restPasswordHandler, updateContorller, userRoleContorller } from "../contorller/authController.js";
 import { isAdmin, isRequire } from "../middleware/authMiddleware.js";
 let route = express.Router()
 //Register || POST
@@ -26,6 +26,8 @@ route.put('/profile-update',isRequire,profileUpdateController)
 route.get(`/all-users`,findAllUserContorlller)
 // user role update || post
 route.post('/user-role',userRoleContorller)
+//user Data update || Put
+route.put('/user-update',isRequire,updateContorller)
 
 
 export default route;

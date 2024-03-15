@@ -8,14 +8,17 @@ import axios from "axios";
 import AddToCart from "../components/form/AddToCart";
 import MoreDeatils from "../components/form/MoreDeatails";
 import { useNavigate } from "react-router-dom";
+import { LiaRupeeSignSolid } from "react-icons/lia";
+import { Flex, Spin } from "antd";
 
 function HomePage() {
-  let navigate=   useNavigate()
+  let navigate = useNavigate()
   let [selectedCategory, setSelectedCategory] = useState([]);
   let [price, setPrice] = useState("");
   let { categories } = useCategory();
   let [filterData, setFilterData] = useState([]);
   let [limitProduct, setLimitProduct] = useState([]);
+  let [scrollPosition, setScrollPosition] = useState('')
   //product count
   let [productCount, setProductCount] = useState("");
   //pageCount
@@ -29,7 +32,7 @@ function HomePage() {
       all.push(id);
     } else {
       all = all.filter((data) => {
-        return data != id;
+        return data !== id;
       });
     }
     setSelectedCategory([...all]);
@@ -60,10 +63,10 @@ function HomePage() {
   async function productList() {
     let { data } = await axios.get(`/api/v1/product-list/${pageCount}`);
 
-    setLimitProduct([...data.products, ...limitProduct]);
+    setLimitProduct([...limitProduct, ...data.products]);
   }
   useEffect(() => {
-    productList();
+    productList()
   }, [pageCount]);
   //this useEffect for total count
   useEffect(() => {
@@ -74,10 +77,30 @@ function HomePage() {
     filterHanlder();
   }, [price, selectedCategory]);
   //this is for singlepageHandler
-  function singlPageHandler(id)
-  {
-       navigate(`/product-details/${id}`)
+  function singlPageHandler(id) {
+    navigate(`/product-details/${id}`)
   }
+
+
+
+  
+  // window.addEventListener('scroll', () => {
+  //   let scroll = window.scrollY
+  //   setScrollPosition(scroll)
+  // })
+
+  // useEffect(() => {
+  //   productList()
+  //   let id = setTimeout(() => {
+  //     if (scrollPosition >100) {
+  //       setPageCount(pageCount + 1)
+  //     }
+  //   }, 500);
+  //   return () => {
+  //     clearTimeout(id)
+  //   }
+  // }, [scrollPosition,pageCount])
+
 
   return (
     <Layout title="Best Offer -ecomm">
@@ -133,18 +156,22 @@ function HomePage() {
             </div>
           </div>
           <div className="col-md-9">
-            <h4 className="text-center mt-2"> All Products </h4>
+            <h3 className="text-center mt-2" style={{ color: "#32752b" }}>Products </h3>
             <p className="text-end">
               {price || selectedCategory.length > 0 ? (
                 <p>
                   {filterData.length}/{productCount} Found
                 </p>
               ) : (
-                `All Product ${productCount}`
+                `Total Products : ${productCount}`
               )}
             </p>
             <div className="row">
-              {limitProduct.length == 0 && <h4>loading....</h4>}
+              {limitProduct.length === 0 && <Flex gap="small" vertical>
+                <Spin tip="Loading" size="large">
+                  <div className="content" />
+                </Spin>
+              </Flex>}
               {limitProduct.length > 0 && (
                 <>
                   {(selectedCategory.length > 0 || price
@@ -168,14 +195,16 @@ function HomePage() {
                                 className="img-fluid"
                               />
                             </div>
-                            <p>
-                              <b>{name}</b>
-                            </p>
-                            <p>{brand}</p>
-                            <p>{price}</p>
-                            <div className="action d-flex">
-                                 <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler}/>
-                                <AddToCart prod={item}/>
+                            <div className="card-footer">
+                              <p>
+                                <b>{name}</b>
+                              </p>
+                              <p>{brand}</p>
+                              <p><LiaRupeeSignSolid /> {price}</p>
+                              <div className="action d-flex">
+                                <MoreDeatils p_id={item._id} singlPageHandler={singlPageHandler} />
+                                <AddToCart prod={item} />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -190,12 +219,11 @@ function HomePage() {
             {productCount > limitProduct.length && (
               <button
                 className="btn btn-warning"
+                style={{ border: "none", }}
                 onClick={() => {
                   setPageCount(pageCount + 1);
                 }}
-              >
-                LOAD MORE
-              </button>
+              >Load More</button>
             )}
           </div>
         </div>

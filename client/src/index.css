@@ -13,3 +13,24 @@ body {
   
   border-radius:5%;
 }
+.dashboard:hover{
+  color:#b21cc9 !important;
+}
+.new-navbar3:hover{
+  color:white !important; 
+  
+  border-radius:5%;
+}
+.categoryCard:hover{
+  color:#f54565 !important;
+  padding: 0.15px;
+}
+.categoryCard{
+  color:#54c0d1;
+}
+.content {
+  margin: auto;
+  margin-top: 170px;
+  padding: 50px;
+  border-radius: 4px;
+}

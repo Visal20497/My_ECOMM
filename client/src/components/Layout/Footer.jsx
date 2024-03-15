@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: '#c6c996', color: 'white', padding: '25px 0',fontSize:"16px" }}>
+    <footer style={{ backgroundColor: '#c6c996', color: 'white', padding: '25px 0',fontSize:"17px" }}>
     <div style={{ textAlign: 'center' }}>
        <Link to="/about" style={{textDecoration:"none", color:"white"}}><span className='new-navbar2' style={{ marginRight: '10px' }}>About</span> </Link> 
       <span style={{ marginRight: '10px' }}>|</span>

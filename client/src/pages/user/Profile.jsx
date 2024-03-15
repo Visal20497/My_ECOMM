@@ -5,6 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useLocation, useNavigate} from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { FaEdit } from "react-icons/fa";
 
 function Profile() {
   let [auth,setAuth] = useAuth();
@@ -49,7 +50,7 @@ function Profile() {
   return (
     <Layout title={"Update Profile -ecom"}>
       <div className="container ">
-      <h1 className="text-center m-3">Update Profile</h1>
+      <h1 className="text-center m-3"style={{color:"#1cc990"}}>Update Profile</h1>
         <div className="row ">
           <div className="col-md-3">
             <UserDashboardMenu />
@@ -122,7 +123,7 @@ function Profile() {
                     className="btn btn-primary"
                     onClick={updateUserProfile}
                   >
-                    Update User
+                  <FaEdit />  Update User
                   </button>
                 </div>
               </div>

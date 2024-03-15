@@ -26,6 +26,8 @@ import CategoryPage from "./pages/CategoryPage.jsx";
 import AllCategory from "./pages/AllCategory.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import SignInByOtp from './pages/auth/SignInByOtp.jsx'
+import Box from "./pages/auth/Box.jsx";
+
 
 function App() {
   return (
@@ -43,6 +45,9 @@ function App() {
       <Route path="/product-details/:id" element={<DeatailsProduct/>} />
       <Route path="/cart" element={<Checkout/>}/>
       <Route path='/otp' element={<SignInByOtp/>}/>
+      <Route path='/box' element={<Box/>}/>
+      
+
 
 
       {/* //this is for the normal user */}

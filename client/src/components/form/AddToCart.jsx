@@ -11,7 +11,7 @@ function AddToCart({prod}) {
     toast('Item Added In Cart')
   }
   return (
-    <button className="btn btn-secondary ms-2" onClick={setCartHandler}>
+    <button className="btn btn-secondary ms-2"style={{fontSize:"13.5px"}} onClick={setCartHandler}>
     ADD TO CART
   </button>
   )

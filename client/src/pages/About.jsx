@@ -22,25 +22,27 @@ function About() {
               Streamline the checkout process with multiple payment options and secure transactions.
               Provide reliable customer support through FAQs, live chat, and contact forms.
               Optimize for mobile devices, offer promotions, and track analytics for continuous improvement.</p>
-            <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExample" class="carousel slide">
               <div className="carousel-inner">
-                <div className="carousel-item active" data-bs-interval={10000}>
-                  <img src="https://media.istockphoto.com/id/1442543641/photo/customer-scanning-qr-code-with-smartphone-at-store.jpg?s=1024x1024&w=is&k=20&c=24rf6wDmAB_fyHpe7qP_NHlWWocQ6ebCiZO8vywqSeg=" className="d-block w-100" alt="..." />
-                </div>
-                <div className="carousel-item" data-bs-interval={2000}>
+
+                <div className="carousel-item active">
                   <img src="https://media.istockphoto.com/id/984835220/photo/packages-are-transported-in-high-tech-settings-online-shopping-concept-of-automatic-logistics.jpg?s=1024x1024&w=is&k=20&c=9Q9j_LsYY_8Z4qwtYfiuR89gpd7n8AcXoJFbuu5BTuo=" className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item ">
+                  <img src="https://media.istockphoto.com/id/1442543641/photo/customer-scanning-qr-code-with-smartphone-at-store.jpg?s=1024x1024&w=is&k=20&c=24rf6wDmAB_fyHpe7qP_NHlWWocQ6ebCiZO8vywqSeg=" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
                   <img src="https://media.istockphoto.com/id/854900142/photo/money-key-rupee.jpg?s=1024x1024&w=is&k=20&c=_R_6TZfT6CovpL8ax5F_lqwsI7vyR42MmcyHpSjMBaE=" className="d-block w-100" alt="..." />
                 </div>
               </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true" />
-                <span className="visually-hidden">Previous</span>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
               </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true" />
-                <span className="visually-hidden">Next</span>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
               </button>
             </div>
 
@@ -75,7 +77,7 @@ function About() {
               </div>
               <p>
                 Data powers the most successful e-commerce operations, which take advantage of best practices such as targeted email marketing, audience segmentation, and marketing automation. For example, following up with a customer after they have placed an item in an online shopping cart but didn’t complete the transaction can significantly increase your likelihood of making the sale.
-                E-commerce has many benefits for businesses, as well as a few potential drawbacks. Online stores can improve the customer experience because shopping online is easy and convenient. Additionally, with a low startup cost and a wide range of tools available for entrepreneurs, starting an e-commerce business is much easier than starting another type of business. </p>
+                E-commerce has many benefits for businesses, as well as a few potential drawbacks.. Online stores can improve the customer experience because shopping online is easy and convenient. Additionally, with a low startup cost and a wide range of tools available for entrepreneurs, starting an e-commerce business is much easier than starting another type of business. </p>
             </div>
           </div>
         </div>

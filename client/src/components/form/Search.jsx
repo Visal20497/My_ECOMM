@@ -43,7 +43,7 @@ function Search() {
   <div className="container-fluid">
     <form className="d-flex" >
       <input className="form-control me-2"value={search.keyword} onChange={searchHandler} type="search" placeholder="Search..." aria-label="Search" />
-      <button className="btn btn-outline-success" onClick={searchSubmitHandler}>Search</button>
+      <button className="btn btn-outline-warning" onClick={searchSubmitHandler}>Search</button>
     </form>
   </div>
 </nav>

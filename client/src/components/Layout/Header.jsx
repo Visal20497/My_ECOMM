@@ -28,9 +28,9 @@ function Header() {
  
  
   return (
-    <nav className="navbar navbar-expand-lg navbar-light p-3 fixed-top" style={{backgroundColor:"#c6c995"}}>
+    <nav className="navbar navbar-expand-lg navbar-light p-3 fixed-top" style={{backgroundColor:"#496989"}}>
       <div className="container-fluid " >
-        <Link className="navbar-brand d-flex align-items-center gap-2 new-navbar3" to="/" style={{color:"#3d593b",fontSize:"23px"}}>
+        <Link className="navbar-brand d-flex align-items-center gap-2 new-navbar3" to="/" style={{color:"#A8CD9F",fontSize:"23px"}}>
         <BiLogoVenmo />  Vishal~Mart
         </Link>
        <Search/>

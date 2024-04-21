@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 import { Helmet } from "react-helmet";
 import { Toaster } from 'react-hot-toast';
 
@@ -21,10 +21,10 @@ function Layout({ children,description,keywords,author,title }) {
   );
 }
 Layout.defaultProps={
-  description:"Best app for online shopping",
-  keywords:"online shopping || elcotrnic",
+  description:"Login Registration Assignment",
+  keywords:"Assignment",
   author:"Vishal",
-  title:"Eocomm-Maheshwari"
+  title:"My Assignment"
 }
 
 export default Layout;

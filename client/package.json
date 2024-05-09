@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://localhost:8090",
+  "proxy": "https://myecom-backend.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

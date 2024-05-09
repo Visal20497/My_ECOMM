@@ -23,7 +23,9 @@ app.use(morgan('dev'))
 //this is for database
 DbConnection()
 //this is for the cors
-app.use(cors())
+app.use(cors({
+    origin:"https://myecom-frontend.vercel.app/"
+}))
 
 
 let PORT=process.env.PORT;

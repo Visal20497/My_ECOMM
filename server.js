@@ -28,7 +28,7 @@ app.use(cors({
 }))
 
 
-let PORT=process.env.PORT;
+let PORT=process.env.PORT  || 8090;
 let MODE=process.env.MODE
 // console.log(process.env.MODE)
 

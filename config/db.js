@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // MongoDb Database Connection
 let DbConnection=async()=>{
     try{
-        let connection=await mongoose.connect('mongodb://127.0.0.1:27017/MYEcom')
+        let connection=await mongoose.connect('mongodb+srv://visal20497:wpxFBHtGfSSZEhZR@cluster0.zxg4jay.mongodb.net/ecom?retryWrites=true&w=majority&appName=Cluster0')
         console.log("Mongodb connnected!")
     }
     catch(error){

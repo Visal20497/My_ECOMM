@@ -161,7 +161,7 @@ export let profileUpdateController=async(req,res)=>{
      try {
         let {role,id}=req.body
         let  findusers= await usersModel.findOne({_id:id})
-        let updateRole=await usersModel.findByIdAndUpdate({_id:{$ne:findusers._id}},{role:role})
+        let updateRole=await usersModel.findByIdAndUpdate({_id:findusers._id},{$set:{role:role}})
         res.status(200).send({message:"User role update successfully",success:true,users:updateRole,new:true})
 
      } catch (error) {

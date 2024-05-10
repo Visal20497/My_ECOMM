@@ -1,6 +1,6 @@
 import express from "express";
 import { isAdmin, isRequire } from './../middleware/authMiddleware.js'
-import { allCategoryController, createCategoryController, deleteCategoryController, singleCategoryController, updateCategoryController } from "../contorller/CategoryController.js";
+import { allCategoryController, createCategoryController, deleteCategoryController, singleCategoryController, updateCategoryController } from "../contorller/categoryController.js";
 let route = express.Router()
 //create-category || POST
 route.post('/create-category',isRequire,isAdmin, createCategoryController)

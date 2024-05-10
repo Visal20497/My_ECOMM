@@ -1,0 +1,969 @@
+[{
+  "_id": {
+    "$oid": "65f0946f4e11b757fa85efc4"
+  },
+  "name": "Shoes",
+  "price": 1299,
+  "quantity": 45,
+  "brand": "Nike",
+  "description": "Nike shoes boast sleek designs, engineered for both style and performance. Crafted with cutting-edge technology, they offer comfort and durability for every stride. From casual kicks to high-performance trainers, Puma shoes fuse fashion with function seamlessly.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265451/ldjktp7eqxa714qmqldj.jpg",
+      "public_id": "ldjktp7eqxa714qmqldj",
+      "_id": {
+        "$oid": "65f0946f4e11b757fa85efc5"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265453/a422nzyhlsi3qjrzwrhx.jpg",
+      "public_id": "a422nzyhlsi3qjrzwrhx",
+      "_id": {
+        "$oid": "65f0946f4e11b757fa85efc6"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265454/hx2sk2ej1rm86arbangj.jpg",
+      "public_id": "hx2sk2ej1rm86arbangj",
+      "_id": {
+        "$oid": "65f0946f4e11b757fa85efc7"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265455/fwukmlcipmxcaenu7pqr.jpg",
+      "public_id": "fwukmlcipmxcaenu7pqr",
+      "_id": {
+        "$oid": "65f0946f4e11b757fa85efc8"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc638c66ef6f205f9d3473"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T17:44:15.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:44:15.589Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f095274e11b757fa85f077"
+  },
+  "name": "Sleeper",
+  "price": 699,
+  "quantity": 56,
+  "brand": "Nike",
+  "description": "Nike's sleeper design seamlessly blends comfort with style, offering a cozy yet trendy footwear option. With cushioned soles and breathable materials, it ensures a restful experience for your feet. Whether lounging at home or running errands, these sneakers provide effortless fashion and relaxation. Available in a variety of colors and patterns, Nike sleepers are the epitome of laid-back luxury.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265635/clmejzza6xuuep6pkk3z.jpg",
+      "public_id": "clmejzza6xuuep6pkk3z",
+      "_id": {
+        "$oid": "65f095274e11b757fa85f078"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265636/zfvchjsxssnnte8ic8dn.jpg",
+      "public_id": "zfvchjsxssnnte8ic8dn",
+      "_id": {
+        "$oid": "65f095274e11b757fa85f079"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265637/jwbxbiwcx9j1t72wjw2e.jpg",
+      "public_id": "jwbxbiwcx9j1t72wjw2e",
+      "_id": {
+        "$oid": "65f095274e11b757fa85f07a"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265638/rqxd7hb31ga2uah3dlg5.jpg",
+      "public_id": "rqxd7hb31ga2uah3dlg5",
+      "_id": {
+        "$oid": "65f095274e11b757fa85f07b"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc638c66ef6f205f9d3473"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T17:47:19.194Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:47:19.194Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f095e14e11b757fa85f090"
+  },
+  "name": "Shoes",
+  "price": 599,
+  "quantity": 31,
+  "brand": "Redtape",
+  "description": "Redtape shoes boast sleek designs, engineered for both style and performance. Crafted with cutting-edge technology, they offer comfort and durability for every stride. From casual kicks to high-performance trainers, Redtap shoes fuse fashion with function seamlessly.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265821/vd0tpz7yvieazf6xdwxr.jpg",
+      "public_id": "vd0tpz7yvieazf6xdwxr",
+      "_id": {
+        "$oid": "65f095e14e11b757fa85f091"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265823/vhvdnt2m4lwxtppkfyef.jpg",
+      "public_id": "vhvdnt2m4lwxtppkfyef",
+      "_id": {
+        "$oid": "65f095e14e11b757fa85f092"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265824/hbwomxxzfmajqgjuw1fl.jpg",
+      "public_id": "hbwomxxzfmajqgjuw1fl",
+      "_id": {
+        "$oid": "65f095e14e11b757fa85f093"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265825/zk0hdwajykatzx0gxudh.jpg",
+      "public_id": "zk0hdwajykatzx0gxudh",
+      "_id": {
+        "$oid": "65f095e14e11b757fa85f094"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc638c66ef6f205f9d3473"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T17:50:25.907Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:50:25.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f096624e11b757fa85f0ad"
+  },
+  "name": "Sleeper",
+  "price": 559,
+  "quantity": 29,
+  "brand": "Relexo",
+  "description": "Relaxo sleepers are the epitome of comfort and simplicity, crafted with soft materials for a cozy feel. With ergonomic designs and sturdy construction, they offer support for all-day wear. Whether strolling on the beach or lounging at home, Relaxo sleepers provide relaxation with every step. Available in a range of colors and sizes, they're a must-have for effortless comfort.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265950/hepjmdne2f14psjsb2nq.jpg",
+      "public_id": "hepjmdne2f14psjsb2nq",
+      "_id": {
+        "$oid": "65f096624e11b757fa85f0ae"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265951/agrwjmjgi2egfflgx1lb.jpg",
+      "public_id": "agrwjmjgi2egfflgx1lb",
+      "_id": {
+        "$oid": "65f096624e11b757fa85f0af"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265952/abpczfe0acrnfyfmux8m.jpg",
+      "public_id": "abpczfe0acrnfyfmux8m",
+      "_id": {
+        "$oid": "65f096624e11b757fa85f0b0"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710265953/thrlwqprwn61l1j0dlus.jpg",
+      "public_id": "thrlwqprwn61l1j0dlus",
+      "_id": {
+        "$oid": "65f096624e11b757fa85f0b1"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc638c66ef6f205f9d3473"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T17:52:34.204Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:52:34.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f097334e11b757fa85f227"
+  },
+  "name": "T-Shirt",
+  "price": 569,
+  "quantity": 56,
+  "brand": "Cobb",
+  "description": "Designed for the active and stylish young gentleman, this boys' t-shirt combines comfort with cool. Made from soft and breathable cotton fabric, it ensures all-day comfort during playtime or outings. With a classic crew neckline and short sleeves, it offers a versatile look that pairs effortlessly with jeans, shorts, or joggers. Available in a range of vibrant colors and fun prints, this t-shirt is a wardrobe essential for every boy's casual wardrobe.\"",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266159/q5gywbfh96qfct8c9hvg.jpg",
+      "public_id": "q5gywbfh96qfct8c9hvg",
+      "_id": {
+        "$oid": "65f097334e11b757fa85f228"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266160/spwjwtzcp1jspylk8wtg.jpg",
+      "public_id": "spwjwtzcp1jspylk8wtg",
+      "_id": {
+        "$oid": "65f097334e11b757fa85f229"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266161/qv9x4ahrhznoqrfo3hsx.jpg",
+      "public_id": "qv9x4ahrhznoqrfo3hsx",
+      "_id": {
+        "$oid": "65f097334e11b757fa85f22a"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266162/p9o5fwcp5fzltawgakqk.jpg",
+      "public_id": "p9o5fwcp5fzltawgakqk",
+      "_id": {
+        "$oid": "65f097334e11b757fa85f22b"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092894e11b757fa85ef17"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T17:56:03.462Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:56:03.462Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f097e34e11b757fa85f3a1"
+  },
+  "name": "T-Shirt",
+  "price": 1199,
+  "quantity": 36,
+  "brand": "Puma",
+  "description": "Designed for the active and stylish young gentleman, this boys' t-shirt combines comfort with cool. Made from soft and breathable cotton fabric, it ensures all-day comfort during playtime or outings. With a classic crew neckline and short sleeves, it offers a versatile look that pairs effortlessly with jeans, shorts, or joggers. Available in a range of vibrant colors and fun prints, this t-shirt is a wardrobe essential for every boy's casual wardrobe.\"",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266335/ixyediux1ufnexzlvxqv.jpg",
+      "public_id": "ixyediux1ufnexzlvxqv",
+      "_id": {
+        "$oid": "65f097e34e11b757fa85f3a2"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266336/scephgvzz3ufsal0ddpf.jpg",
+      "public_id": "scephgvzz3ufsal0ddpf",
+      "_id": {
+        "$oid": "65f097e34e11b757fa85f3a3"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266337/syhq3pwj6rfpcy9672ue.jpg",
+      "public_id": "syhq3pwj6rfpcy9672ue",
+      "_id": {
+        "$oid": "65f097e34e11b757fa85f3a4"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266338/kqg2qorexnwchdinri3r.jpg",
+      "public_id": "kqg2qorexnwchdinri3r",
+      "_id": {
+        "$oid": "65f097e34e11b757fa85f3a5"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092894e11b757fa85ef17"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T17:58:59.320Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T17:58:59.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f0986b4e11b757fa85f4ca"
+  },
+  "name": "Short",
+  "price": 1599,
+  "quantity": 46,
+  "brand": "Nike",
+  "description": "Shorts, the epitome of casual comfort, offer freedom and style in equal measure. Crafted from lightweight and breathable fabrics, they keep you cool during warmer days. With various lengths and designs, from classic chino to athletic styles, there's a pair for every occasion. Whether lounging at home or hitting the beach, shorts are a summer wardrobe staple for effortless relaxation.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266470/mqhizmccyb6xv6mndaww.jpg",
+      "public_id": "mqhizmccyb6xv6mndaww",
+      "_id": {
+        "$oid": "65f0986b4e11b757fa85f4cb"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266471/crpdjmqibt1nwv1utuo6.jpg",
+      "public_id": "crpdjmqibt1nwv1utuo6",
+      "_id": {
+        "$oid": "65f0986b4e11b757fa85f4cc"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266473/rndadun7zc0hti6duhio.jpg",
+      "public_id": "rndadun7zc0hti6duhio",
+      "_id": {
+        "$oid": "65f0986b4e11b757fa85f4cd"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266474/a8jhjpo4fiqdxqr3nzzz.jpg",
+      "public_id": "a8jhjpo4fiqdxqr3nzzz",
+      "_id": {
+        "$oid": "65f0986b4e11b757fa85f4ce"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092894e11b757fa85ef17"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:01:15.246Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:01:15.246Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f0990e4e11b757fa85f691"
+  },
+  "name": "Allen-Solley T-shirt",
+  "price": 1355,
+  "quantity": 21,
+  "brand": "Allen-Solley",
+  "description": "Allen Solly t-shirts exude sophistication with a touch of casual charm. Crafted from premium fabrics, they offer a luxurious feel and impeccable quality. Featuring timeless designs and modern cuts, each shirt effortlessly elevates your style. From solid colors to subtle patterns, Allen Solly t-shirts are versatile essentials for any wardrobe.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266633/xdfw03ciaxft1upwbdd9.jpg",
+      "public_id": "xdfw03ciaxft1upwbdd9",
+      "_id": {
+        "$oid": "65f0990e4e11b757fa85f692"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266634/mom4ho2wuubtzuxnwfs6.jpg",
+      "public_id": "mom4ho2wuubtzuxnwfs6",
+      "_id": {
+        "$oid": "65f0990e4e11b757fa85f693"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266636/niz9crslj9hkajlnnfyi.jpg",
+      "public_id": "niz9crslj9hkajlnnfyi",
+      "_id": {
+        "$oid": "65f0990e4e11b757fa85f694"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266637/cgwdfcybv9mrcirxwbbv.jpg",
+      "public_id": "cgwdfcybv9mrcirxwbbv",
+      "_id": {
+        "$oid": "65f0990e4e11b757fa85f695"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092894e11b757fa85ef17"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:03:58.660Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:03:58.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09a094e11b757fa85f71c"
+  },
+  "name": "Shoes",
+  "price": 1599,
+  "quantity": 44,
+  "brand": "addidas",
+  "description": "Lady shoes: the epitome of elegance and comfort, crafted to adorn every step with grace. From classic pumps to trendy sneakers, they blend style and sophistication flawlessly. With a variety of designs, colors, and materials, lady shoes complement any outfit effortlessly. Whether striding through the city streets or dancing the night away, they are the perfect accessory for every occasion.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266884/sbgb7e89dxemqyllhcdx.jpg",
+      "public_id": "sbgb7e89dxemqyllhcdx",
+      "_id": {
+        "$oid": "65f09a094e11b757fa85f71d"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266886/iydpmotgo1lbhmqomsxu.jpg",
+      "public_id": "iydpmotgo1lbhmqomsxu",
+      "_id": {
+        "$oid": "65f09a094e11b757fa85f71e"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266887/hrpfhucotnzjsfo6cpo0.jpg",
+      "public_id": "hrpfhucotnzjsfo6cpo0",
+      "_id": {
+        "$oid": "65f09a094e11b757fa85f71f"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710266888/okrqkuzcq4yflbyrdl0p.jpg",
+      "public_id": "okrqkuzcq4yflbyrdl0p",
+      "_id": {
+        "$oid": "65f09a094e11b757fa85f720"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc639a66ef6f205f9d3478"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:08:09.147Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:08:09.147Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09a904e11b757fa85f75d"
+  },
+  "name": "Sleeper",
+  "price": 1099,
+  "quantity": 78,
+  "brand": "Spark",
+  "description": "Lady sleepers: combining comfort with chic simplicity, they are a staple of relaxation and style. Crafted from soft and breathable materials, they cradle the feet in luxurious comfort. With elegant designs and delicate embellishments, lady sleepers effortlessly transition from loungewear to casual outings. Whether unwinding at home or running errands, these sleepers offer a touch of sophistication to every moment of leisure.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267021/jd99ilhoinnyaroerwte.jpg",
+      "public_id": "jd99ilhoinnyaroerwte",
+      "_id": {
+        "$oid": "65f09a904e11b757fa85f75e"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267022/hue3020ukitttbpmggdg.jpg",
+      "public_id": "hue3020ukitttbpmggdg",
+      "_id": {
+        "$oid": "65f09a904e11b757fa85f75f"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267023/njzbh7uxf0t3enbqpaho.jpg",
+      "public_id": "njzbh7uxf0t3enbqpaho",
+      "_id": {
+        "$oid": "65f09a904e11b757fa85f760"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267024/ftcltcwblgmnuaa4ltcd.jpg",
+      "public_id": "ftcltcwblgmnuaa4ltcd",
+      "_id": {
+        "$oid": "65f09a904e11b757fa85f761"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc639a66ef6f205f9d3478"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:10:24.949Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:10:24.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09b614e11b757fa85f7c0"
+  },
+  "name": "Shoes",
+  "price": 1250,
+  "quantity": 51,
+  "brand": "Nike",
+  "description": "Lady shoes: the epitome of elegance and comfort, crafted to adorn every step with grace. From classic pumps to trendy sneakers, they blend style and sophistication flawlessly. With a variety of designs, colors, and materials, lady shoes complement any outfit effortlessly. Whether striding through the city streets or dancing the night away, they are the perfect accessory for every occasion.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267228/ywq4ip6r1nm1a1rkjpov.jpg",
+      "public_id": "ywq4ip6r1nm1a1rkjpov",
+      "_id": {
+        "$oid": "65f09b614e11b757fa85f7c1"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267230/w74x4jpphkqhjggufiz9.jpg",
+      "public_id": "w74x4jpphkqhjggufiz9",
+      "_id": {
+        "$oid": "65f09b614e11b757fa85f7c2"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267232/fqs28pewvujzi5jgbivu.jpg",
+      "public_id": "fqs28pewvujzi5jgbivu",
+      "_id": {
+        "$oid": "65f09b614e11b757fa85f7c3"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267233/u0rvvea85o1qabrs2crf.jpg",
+      "public_id": "u0rvvea85o1qabrs2crf",
+      "_id": {
+        "$oid": "65f09b614e11b757fa85f7c4"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc639a66ef6f205f9d3478"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:13:54.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:13:54.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09bc64e11b757fa85f7fd"
+  },
+  "name": "Shoes",
+  "price": 1499,
+  "quantity": 65,
+  "brand": "Puma",
+  "description": "Lady shoes: the epitome of elegance and comfort, crafted to adorn every step with grace. From classic pumps to trendy sneakers, they blend style and sophistication flawlessly. With a variety of designs, colors, and materials, lady shoes complement any outfit effortlessly. Whether striding through the city streets or dancing the night away, they are the perfect accessory for every occasion.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267329/rxwhirtmbsh6s9o8nuee.jpg",
+      "public_id": "rxwhirtmbsh6s9o8nuee",
+      "_id": {
+        "$oid": "65f09bc64e11b757fa85f7fe"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267331/g5lg2nbcfw5maws8xzx7.jpg",
+      "public_id": "g5lg2nbcfw5maws8xzx7",
+      "_id": {
+        "$oid": "65f09bc64e11b757fa85f7ff"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267332/knpbvszpsczfyzubodbv.jpg",
+      "public_id": "knpbvszpsczfyzubodbv",
+      "_id": {
+        "$oid": "65f09bc64e11b757fa85f800"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267334/vibdwydbw1ofl2gysmwl.jpg",
+      "public_id": "vibdwydbw1ofl2gysmwl",
+      "_id": {
+        "$oid": "65f09bc64e11b757fa85f801"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc639a66ef6f205f9d3478"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:15:34.864Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:15:34.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09cdb4e11b757fa85fa5c"
+  },
+  "name": "Kids-Sleeper",
+  "price": 499,
+  "quantity": 61,
+  "brand": "Spark",
+  "description": "Kids' sleepers: designed for ultimate coziness and playtime adventures, they're a staple of childhood comfort. Crafted from soft, durable materials, they ensure little feet stay snug and warm. With fun prints and vibrant colors, kids' sleepers add a touch of whimsy to bedtime routines. Whether cuddling up for story time or exploring the great indoors, these sleepers are the perfect companion for every little explorer.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267607/afgqjcd1rzsrvog8bojg.jpg",
+      "public_id": "afgqjcd1rzsrvog8bojg",
+      "_id": {
+        "$oid": "65f09cdb4e11b757fa85fa5d"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267608/uuqlwzj7fr6vifgqfsnb.jpg",
+      "public_id": "uuqlwzj7fr6vifgqfsnb",
+      "_id": {
+        "$oid": "65f09cdb4e11b757fa85fa5e"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267610/e4qfiqub1qwx2sovap5w.jpg",
+      "public_id": "e4qfiqub1qwx2sovap5w",
+      "_id": {
+        "$oid": "65f09cdb4e11b757fa85fa5f"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267611/k53a7id6wnxf1zyg5btt.jpg",
+      "public_id": "k53a7id6wnxf1zyg5btt",
+      "_id": {
+        "$oid": "65f09cdb4e11b757fa85fa60"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc640f66ef6f205f9d347d"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:20:11.918Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:20:11.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09d664e11b757fa85faa1"
+  },
+  "name": "Shorts",
+  "price": 999,
+  "quantity": 25,
+  "brand": "Flying Machine",
+  "description": "Kids' shorts: the perfect blend of style and playfulness for little ones on the move. Made from lightweight, breathable fabrics, they keep active children cool and comfortable all day long. With vibrant colors and playful patterns, kids' shorts add a splash of fun to any outfit. Whether running, jumping, or simply enjoying outdoor adventures, these shorts are essential for every child's wardrobe.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267747/tvcq3rvnkrzxnnob2c1w.jpg",
+      "public_id": "tvcq3rvnkrzxnnob2c1w",
+      "_id": {
+        "$oid": "65f09d664e11b757fa85faa2"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267748/bwn9xim0ywefyjyjqejy.jpg",
+      "public_id": "bwn9xim0ywefyjyjqejy",
+      "_id": {
+        "$oid": "65f09d664e11b757fa85faa3"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267749/ozkq3dot25kqjwtaqlid.jpg",
+      "public_id": "ozkq3dot25kqjwtaqlid",
+      "_id": {
+        "$oid": "65f09d664e11b757fa85faa4"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267750/zma7egpsfynwq3xiguoh.jpg",
+      "public_id": "zma7egpsfynwq3xiguoh",
+      "_id": {
+        "$oid": "65f09d664e11b757fa85faa5"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc640f66ef6f205f9d347d"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:22:30.960Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:22:30.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09dd04e11b757fa85fb00"
+  },
+  "name": "T-Shirt for Kids",
+  "price": 599,
+  "quantity": 50,
+  "brand": "Flying Machine",
+  "description": "Kids' t-shirts: a cozy and versatile staple for the little ones' wardrobe. Crafted from soft, breathable cotton, they ensure all-day comfort during playtime and beyond. With a range of playful designs and vibrant colors, kids' t-shirts let them showcase their unique style. Whether for school, sports, or simply hanging out with friends, these t-shirts are the perfect choice for every young adventurer.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267852/qamnfctnr0x9utjcbjqr.jpg",
+      "public_id": "qamnfctnr0x9utjcbjqr",
+      "_id": {
+        "$oid": "65f09dd04e11b757fa85fb01"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267853/uazmsj0gawwasrx4bsxt.jpg",
+      "public_id": "uazmsj0gawwasrx4bsxt",
+      "_id": {
+        "$oid": "65f09dd04e11b757fa85fb02"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267854/frdb3mxmqqmwwij6jbpn.jpg",
+      "public_id": "frdb3mxmqqmwwij6jbpn",
+      "_id": {
+        "$oid": "65f09dd04e11b757fa85fb03"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710267855/hmgecc5rkn1grfalqb9z.jpg",
+      "public_id": "hmgecc5rkn1grfalqb9z",
+      "_id": {
+        "$oid": "65f09dd04e11b757fa85fb04"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65dc640f66ef6f205f9d347d"
+  },
+  "shipping": "no",
+  "createdAt": {
+    "$date": "2024-03-12T18:24:16.038Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:24:16.038Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f09f6b4e11b757fa85fece"
+  },
+  "name": "Girl T-Shirt",
+  "price": 1199,
+  "quantity": 55,
+  "brand": "Allen-Solley",
+  "description": "Allen Solly girls' t-shirts: blending style and comfort for the young fashionista. Crafted from high-quality fabrics, they offer a luxurious feel and long-lasting durability. With chic designs and trendy details, Allen Solly t-shirts elevate any girl's wardrobe effortlessly. Whether for a casual outing or a special occasion, these t-shirts exude confidence and charm, making them a must-have for every stylish young lady.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268263/w1kexaym6picuhqtud4y.jpg",
+      "public_id": "w1kexaym6picuhqtud4y",
+      "_id": {
+        "$oid": "65f09f6b4e11b757fa85fecf"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268264/zi0lunrxynneetesgpqi.jpg",
+      "public_id": "zi0lunrxynneetesgpqi",
+      "_id": {
+        "$oid": "65f09f6b4e11b757fa85fed0"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268265/blidm3kfps6xrkiphckn.jpg",
+      "public_id": "blidm3kfps6xrkiphckn",
+      "_id": {
+        "$oid": "65f09f6b4e11b757fa85fed1"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268266/ohzpkeqr715knoslt0xd.jpg",
+      "public_id": "ohzpkeqr715knoslt0xd",
+      "_id": {
+        "$oid": "65f09f6b4e11b757fa85fed2"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092964e11b757fa85ef1c"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T18:31:07.187Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:31:07.187Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f0a0144e11b757fa8601d3"
+  },
+  "name": "Girl T-Shirt",
+  "price": 699,
+  "quantity": 77,
+  "brand": "Puma",
+  "description": "Puma girls' t-shirts: blending style and comfort for the young fashionista. Crafted from high-quality fabrics, they offer a luxurious feel and long-lasting durability. With chic designs and trendy details, Allen Solly t-shirts elevate any girl's wardrobe effortlessly. Whether for a casual outing or a special occasion, these t-shirts exude confidence and charm, making them a must-have for every stylish young lady.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268432/o6qil7fnsu4nlqi2p4g1.jpg",
+      "public_id": "o6qil7fnsu4nlqi2p4g1",
+      "_id": {
+        "$oid": "65f0a0144e11b757fa8601d4"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268434/nitgwfethh8gp7r0ju4s.jpg",
+      "public_id": "nitgwfethh8gp7r0ju4s",
+      "_id": {
+        "$oid": "65f0a0144e11b757fa8601d5"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268435/n5bikw2zks7estyvvfck.jpg",
+      "public_id": "n5bikw2zks7estyvvfck",
+      "_id": {
+        "$oid": "65f0a0144e11b757fa8601d6"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268436/rngs6bo0azlnsmaruinp.jpg",
+      "public_id": "rngs6bo0azlnsmaruinp",
+      "_id": {
+        "$oid": "65f0a0144e11b757fa8601d7"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092964e11b757fa85ef1c"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T18:33:56.681Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:33:56.681Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f0a0a74e11b757fa860220"
+  },
+  "name": "Girl Clothes",
+  "price": 1699,
+  "quantity": 58,
+  "brand": "Fabindia",
+  "description": " Blending style and comfort for the young fashionista. Crafted from high-quality fabrics, they offer a luxurious feel and long-lasting durability. With chic designs and trendy details, Allen Solly t-shirts elevate any girl's wardrobe effortlessly. Whether for a casual outing or a special occasion, these t-shirts exude confidence and charm, making them a must-have for every stylish young lady.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268580/xen36srtvx3fxhwvkem0.jpg",
+      "public_id": "xen36srtvx3fxhwvkem0",
+      "_id": {
+        "$oid": "65f0a0a74e11b757fa860221"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268581/bkegfoebjmlnpd07dm3o.jpg",
+      "public_id": "bkegfoebjmlnpd07dm3o",
+      "_id": {
+        "$oid": "65f0a0a74e11b757fa860222"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268582/yeaxpvjqlgmfq06vh57z.jpg",
+      "public_id": "yeaxpvjqlgmfq06vh57z",
+      "_id": {
+        "$oid": "65f0a0a74e11b757fa860223"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268583/povigo8iy83m0nns6xf3.jpg",
+      "public_id": "povigo8iy83m0nns6xf3",
+      "_id": {
+        "$oid": "65f0a0a74e11b757fa860224"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092964e11b757fa85ef1c"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T18:36:23.921Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:36:23.921Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f0a14e4e11b757fa860559"
+  },
+  "name": "T-Shirt",
+  "price": 899,
+  "quantity": 66,
+  "brand": "Flying Machine",
+  "description": "Girls' t-shirts: a delightful fusion of comfort and charm for the young trendsetter. Crafted from soft, breathable fabrics, they ensure all-day wearability without compromising style. With a variety of playful prints, vibrant colors, and stylish embellishments, girls' t-shirts add a touch of personality to any ensemble. Whether for casual outings, school days, or special occasions, these t-shirts are the perfect choice for expressing individuality with flair.",
+  "images": [
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268745/ywlzlp0wgda6lunok6ci.jpg",
+      "public_id": "ywlzlp0wgda6lunok6ci",
+      "_id": {
+        "$oid": "65f0a14e4e11b757fa86055a"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268747/kgwhwwkdg0n96etipq2i.jpg",
+      "public_id": "kgwhwwkdg0n96etipq2i",
+      "_id": {
+        "$oid": "65f0a14e4e11b757fa86055b"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268747/j4nw3is4081uayxna0rl.jpg",
+      "public_id": "j4nw3is4081uayxna0rl",
+      "_id": {
+        "$oid": "65f0a14e4e11b757fa86055c"
+      }
+    },
+    {
+      "url": "http://res.cloudinary.com/dfqcy94co/image/upload/v1710268749/ngdfsehamsnbnyrgmm7q.jpg",
+      "public_id": "ngdfsehamsnbnyrgmm7q",
+      "_id": {
+        "$oid": "65f0a14e4e11b757fa86055d"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "65f092964e11b757fa85ef1c"
+  },
+  "shipping": "yes",
+  "createdAt": {
+    "$date": "2024-03-12T18:39:10.011Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-12T18:39:10.011Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "65dc638c66ef6f205f9d3473"
+  },
+  "name": "Men-Collections",
+  "slug": "men-collections",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65dc639a66ef6f205f9d3478"
+  },
+  "name": "Women-Collections",
+  "slug": "women-collections",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65dc640f66ef6f205f9d347d"
+  },
+  "name": "Kids-Collections",
+  "slug": "kids-collections",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f092894e11b757fa85ef17"
+  },
+  "name": "Boys-Collections",
+  "slug": "boys-collections",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f092964e11b757fa85ef1c"
+  },
+  "name": "Girls-Collections",
+  "slug": "girls-collections",
+  "__v": 0
+}]

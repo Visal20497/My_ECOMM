@@ -77,7 +77,7 @@ function HomePage() {
   }, [price, selectedCategory]);
   //this is for singlepageHandler
   function singlPageHandler(id) {
-    navigate(`https://myecom-48cw.onrender.com/product-details/${id}`)
+    navigate(`/product-details/${id}`)
   }
 
 

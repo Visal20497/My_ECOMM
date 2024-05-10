@@ -25,7 +25,10 @@ DbConnection()
 //this is for the cors
 app.use(cors(
     {
-        origin:"https://myecom.vercel.app"
+        origin:"https://myecom.vercel.app/",
+        credentials:true,
+        methods:["GET","POST","DELETE","PUT"]
+
     }
 ))
 

@@ -53,5 +53,5 @@ app.use('/api/v1',otpRoute)
 
 
 app.listen(PORT,()=>{
-    console.log(`server is started at https://locathost:${PORT} in ${MODE} mode`)
+    console.log(`server is started at https://localhost:${PORT} in ${MODE} mode`)
 })

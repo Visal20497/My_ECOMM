@@ -27,7 +27,7 @@ function ProductContext({ children }) {
   async function getAllProduct() {
     try {
       dispatch(initalData());
-      let { data } = await axios.get("/api/v1/products");
+      let { data } = await axios.get("https://myecom-48cw.onrender.com/api/v1/products");
       dispatch(fetchedData(data.products));
     } catch (err) {
       console.log(err);

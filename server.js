@@ -26,7 +26,7 @@ DbConnection()
 app.use(cors())
 
 
-let PORT=process.env.PORT || 8090;
+let PORT=8090;
 let MODE=process.env.MODE
 // console.log(process.env.MODE)
 
@@ -46,5 +46,5 @@ app.use('/api/v1',otpRoute)
 
 
 app.listen(PORT,()=>{
-    console.log(`server is started at http://localhost:${PORT} in ${MODE} mode`)
+    console.log(`server is started at https://127.0.0.1:${PORT} in ${MODE} mode`)
 })

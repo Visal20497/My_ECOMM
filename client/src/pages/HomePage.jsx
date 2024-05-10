@@ -43,7 +43,7 @@ function HomePage() {
   }
   //this is filteration
   async function filterHanlder() {
-    let res = await axios.post("/api/v1/filter-product", {
+    let res = await axios.post(`https://myecom-48cw.onrender.com/api/v1/filter-product`, {
       price,
       checked: selectedCategory,
     });
@@ -52,7 +52,7 @@ function HomePage() {
   //this is for totalCount
   async function totalCount() {
     try {
-      let { data } = await axios.get("/api/v1/totalProduct");
+      let { data } = await axios.get(`https://myecom-48cw.onrender.com/api/v1/totalProduct`);
       setProductCount(data.total);
     } catch (err) {
       console.log(err);
@@ -60,7 +60,7 @@ function HomePage() {
   }
   //this is for product-list
   async function productList() {
-    let { data } = await axios.get(`/api/v1/product-list/${pageCount}`);
+    let { data } = await axios.get(`https://myecom-48cw.onrender.com/api/v1/product-list/${pageCount}`);
 
     setLimitProduct([...limitProduct, ...data.products]);
   }
@@ -77,7 +77,7 @@ function HomePage() {
   }, [price, selectedCategory]);
   //this is for singlepageHandler
   function singlPageHandler(id) {
-    navigate(`/product-details/${id}`)
+    navigate(`https://myecom-48cw.onrender.com/product-details/${id}`)
   }
 
 

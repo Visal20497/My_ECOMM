@@ -29,7 +29,7 @@ function SignIn() {
       if (!formData.email || !formData.password) {
       } else {
         //api hitting
-        let res = await axios.post(`/api/v1/login`, { ...formData });
+        let res = await axios.post(`https://myecom-48cw.onrender.com/api/v1/login`, { ...formData });
         let data = res.data;
         if (data.success) {
           toast(data.message);

@@ -7,7 +7,7 @@ function CategoryContext({ children }) {
   let [changeCategory, setChangeCategory] = useState(false)
   async function getAllCategory() {
     try {
-      let result = await axios.get("/api/v1/all-category");
+      let result = await axios.get("https://myecom-48cw.onrender.com/api/v1/all-category");
       setCategories(result.data.category);
     } catch (error) {
       console.log(error)

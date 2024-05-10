@@ -31,7 +31,7 @@ function ForgetPassword() {
         console.log("All field are required");
       } else {
         //reset password
-        let res = await axios.post(`/api/v1/reset-password`, { ...formData });
+        let res = await axios.post(`https://myecom-48cw.onrender.com/api/v1/reset-password`, { ...formData });
         let data = res.data;
         if (data.success) {
           toast(data.message);

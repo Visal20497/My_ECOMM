@@ -13,7 +13,7 @@ function AllOrders() {
   let [status, setStatus] = useState(false)
   async function getOrder() {
     try {
-      let { data } = await axios("/api/v1/all-order", {
+      let { data } = await axios("https://myecom-48cw.onrender.com/api/v1/all-order", {
         headers: { Authorization: auth.token },
       });
       if (data.success) {
@@ -30,7 +30,7 @@ function AllOrders() {
   //this is for handling status
   async function statusHandler(value, id) {
     try {
-      let { data } = await axios.put(`/api/v1/update-order/${id}`, { status: value }, { headers: { "Authorization": auth.token } })
+      let { data } = await axios.put(`https://myecom-48cw.onrender.com/api/v1/update-order/${id}`, { status: value }, { headers: { "Authorization": auth.token } })
       if (data.success) {
         toast(data.message)
         setStatus(!status)

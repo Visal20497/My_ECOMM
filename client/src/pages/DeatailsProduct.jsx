@@ -20,10 +20,10 @@ function DeatailsProduct() {
   let { product, single_loader, single_error, singleProduct } = useProduct();
   let [similarProduct, setSimilarProduct] = useState([])
   useEffect(() => {
-    singleProduct(`/api/v1/single-product/${id}`);
+    singleProduct(`https://myecom-48cw.onrender.com/api/v1/single-product/${id}`);
   }, [id]);
   async function similarProductHandler() {
-    let { data } = await axios.get(`/api/v1/similar-product/${product?._id}/${product.category?._id}`)
+    let { data } = await axios.get(`https://myecom-48cw.onrender.com/api/v1/similar-product/${product?._id}/${product.category?._id}`)
     setSimilarProduct(data.products)
     console.log(similarProduct)
 

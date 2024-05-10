@@ -16,7 +16,7 @@ function OtpSystem() {
             toast('Email is required')
         }
         else{
-            let {data}=await axios.post(`api/v1/otp`,{email:search})
+            let {data}=await axios.post(`https://myecom-48cw.onrender.com/api/v1/otp`,{email:search})
             if(data.success){
                 toast(data.message)
                 setFlag(true)

@@ -13,7 +13,7 @@ function CategoryPage() {
      async function getDataBySlug()
      {
       try{
-        let {data}=await axios.get(`/api/v1/product-category/${slug}`)
+        let {data}=await axios.get(`https://myecom-48cw.onrender.com/api/v1/product-category/${slug}`)
          setProduct(data.product)
       }
       catch(err)

@@ -39,7 +39,7 @@ function Signup() {
         console.log(formData);
 
         // api hitting
-        let res = await axios.post(`/api/v1/register`, { ...formData });
+        let res = await axios.post(`https://myecom-48cw.onrender.com/api/v1/register`, { ...formData });
         let data = res.data;
         if (data.success) {
           toast(data.message);

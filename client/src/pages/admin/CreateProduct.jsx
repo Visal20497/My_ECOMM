@@ -55,7 +55,7 @@ function CreateProduct() {
         {
             formData.append("images",images[i].originFileObj)
         }
-        let res= await axios.post('/api/v1/create-product',formData,{headers:{"Content-Type":"multipart/form-data",Authorization:auth.token,}})
+        let res= await axios.post('https://myecom-48cw.onrender.com/api/v1/create-product',formData,{headers:{"Content-Type":"multipart/form-data",Authorization:auth.token,}})
         if(res.data.success)
         {  
            toast(res.data.message)

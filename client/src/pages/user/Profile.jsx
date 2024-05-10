@@ -22,7 +22,7 @@ function Profile() {
       if (!name || !address || !phone) {
         toast("All field are required *");
       } else {
-        let { data } = await axios.put("/api/v1/profile-update", {
+        let { data } = await axios.put("https://myecom-48cw.onrender.com/api/v1/profile-update", {
           name,
           phone,
           address,

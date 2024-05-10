@@ -57,7 +57,7 @@ function UpdateProduct() {
       for (let i = 0; i < images.length; i++) {
         formData.append("images", images[i].originFileObj);
       }
-      let res = await axios.put(`/api/v1/update-product/${id}`, formData, {
+      let res = await axios.put(`https://myecom-48cw.onrender.com/api/v1/update-product/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: auth.token,
@@ -78,7 +78,7 @@ function UpdateProduct() {
   //this is for the deleting the file
   async function deleteProductHandler() {
     try {
-      let res = await axios.delete(`/api/v1/delete-product/${id}`, {
+      let res = await axios.delete(`https://myecom-48cw.onrender.com/api/v1/delete-product/${id}`, {
         headers: { Authorization: auth.token },
       });
 
@@ -96,7 +96,7 @@ function UpdateProduct() {
   }
 
   useEffect(() => {
-    singleProduct(`/api/v1/single-product/${id}`);
+    singleProduct(`https://myecom-48cw.onrender.com/api/v1/single-product/${id}`);
   }, []);
   useEffect(() => {
     if (Object.keys(product).length > 0) {

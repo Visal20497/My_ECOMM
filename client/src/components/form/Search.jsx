@@ -21,7 +21,7 @@ function Search() {
   async function searchSubmitHandler(e){
     try {
          e.preventDefault()
-      let {data}=await axios.get(`/api/v1//search-product/${search.keyword}`)
+      let {data}=await axios.get(`https://myecom-48cw.onrender.com/api/v1//search-product/${search.keyword}`)
       if(data.success){
         setSearch({...search,result:data.products})
         navigation('/search')

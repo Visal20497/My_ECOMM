@@ -10,7 +10,7 @@ function Order() {
   let [orders, setOrders] = useState([]);
   async function getOrder() {
     try {
-      let { data } = await axios("/api/v1/order", {
+      let { data } = await axios("https://myecom-48cw.onrender.com/api/v1/order", {
         headers: { Authorization: auth.token },
       });
       if (data.success) {

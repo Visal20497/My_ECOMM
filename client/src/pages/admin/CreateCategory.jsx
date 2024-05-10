@@ -25,7 +25,7 @@ function CreateCategory() {
     //this is for the delete handler
     async function deleteCategoryHandler(id) {
         try {
-            let result = await axios.delete(`/api/v1/delete-category/${id}`, { headers: { "Authorization": auth.token } })
+            let result = await axios.delete(`https://myecom-48cw.onrender.com/api/v1/delete-category/${id}`, { headers: { "Authorization": auth.token } })
             if (result.data.success) {
                 toast(result.data.message)
                 setChangeCategory(!changeCategory)
@@ -48,7 +48,7 @@ function CreateCategory() {
     // this is for the adding category
     async function sumbmitCategoryHandler() {
         try {
-            let result = await axios.post(`/api/v1/create-category`, { name: category }, { headers: { "Authorization": auth?.token } })
+            let result = await axios.post(`https://myecom-48cw.onrender.com/api/v1/create-category`, { name: category }, { headers: { "Authorization": auth?.token } })
             if (result.data.success) {
                 toast(result.data.message)
                 setCategory('')
@@ -64,7 +64,7 @@ function CreateCategory() {
     }
     const handleOk = async () => {
         try {
-            let { data } = await axios.put(`/api/v1/update-category/${categoryId}`, { name: category }, { headers: { "Authorization": auth?.token } })
+            let { data } = await axios.put(`https://myecom-48cw.onrender.com/api/v1/update-category/${categoryId}`, { name: category }, { headers: { "Authorization": auth?.token } })
             if (data.success) {
                 toast(data.message)
                 setChangeCategory(!changeCategory)

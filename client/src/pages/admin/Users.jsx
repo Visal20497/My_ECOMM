@@ -25,7 +25,7 @@ function Users() {
     }, [flag])
    async function userRole(value, id) {
         try {
-            let {data}=await axios.post('/api/v1/user-role',{id,role:value})
+            let {data}=await axios.post('https://myecom-48cw.onrender.com/api/v1/user-role',{id,role:value})
             if(data.success){
                 toast(data.message)
                 setFlag(!flag)

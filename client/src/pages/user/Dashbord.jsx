@@ -30,7 +30,7 @@ function Dashbord() {
     try {
       let details={name,address,phone,email:auth?.user?.email}
       console.log(details)
-      let {data}=await axios.put(`/api/v1/user-update`,details,{headers:{Authorization:auth?.token}})
+      let {data}=await axios.put(`https://myecom-48cw.onrender.com/api/v1/user-update`,details,{headers:{Authorization:auth?.token}})
       if(data.success){
         setIsModalOpen(false);
         toast(data.message)

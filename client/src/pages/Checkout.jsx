@@ -30,7 +30,7 @@ function Checkout() {
   }
   //token handler
   async function tokenHandler() {
-    let { data } = await axios.get("/api/v1/braintree/token");
+    let { data } = await axios.get("https://myecom-48cw.onrender.com/api/v1/braintree/token");
     setClientToken(data.clientToken);
   }
   useEffect(() => {
@@ -47,7 +47,7 @@ function Checkout() {
   //this is for payment handler
   async function paymentHandler() {
     const { nonce } = await instance.requestPaymentMethod();
-    let {data}= await axios.post('/api/v1/braintree/payment',{cart,nonce},{headers:{"Authorization":auth.token}})
+    let {data}= await axios.post('https://myecom-48cw.onrender.com/api/v1/braintree/payment',{cart,nonce},{headers:{"Authorization":auth.token}})
     console.log(data)
     if(data.ok)
     {

@@ -13,7 +13,7 @@ function Box({ search }) {
     async function submitHandler() {
         try {
             let originalOtp = otp.join('')
-            let { data } = await axios.post(`api/v1/otp-validate`, { otp: originalOtp, email: search })
+            let { data } = await axios.post(`https://myecom-48cw.onrender.com/api/v1/otp-validate`, { otp: originalOtp, email: search })
             if (data.success) {
                 toast(data.message)
                 setAuth(data)

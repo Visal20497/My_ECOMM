@@ -110,7 +110,7 @@ function HomePage() {
               <h6>All Category</h6>
               <hr />
               <div className="mt-1">
-                {categories.map((item) => {
+                {categories?.map((item) => {
                   return (
                     <div key={item._id}>
                       <Checkbox

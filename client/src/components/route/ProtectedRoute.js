@@ -9,7 +9,7 @@ function ProtectedRoute() {
     let [ok,setOk] =useState(false)
    async function isUserValid()
    {
-    let res= await axios.get('/api/v1/auth-user',{headers:{Authorization:auth.token}})
+    let res= await axios.get('https://myecom-48cw.onrender.com/api/v1/auth-user',{headers:{Authorization:auth.token}})
     let data=res.data
      if(data.ok)
      {

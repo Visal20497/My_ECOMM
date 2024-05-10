@@ -8,7 +8,7 @@ function AdminProtectedRoute() {
   let [ok, setOk] = useState(false);
   let [auth] = useAuth();
   async function isAdmin() {
-    let res = await axios.get("/api/v1/admin-auth-route", {
+    let res = await axios.get("https://myecom-48cw.onrender.com/api/v1/admin-auth-route", {
       headers: { Authorization: auth?.token },
     });
     let data = await res.data;

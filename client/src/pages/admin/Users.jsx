@@ -12,7 +12,7 @@ function Users() {
     let role=["User","Admin"]
     async function AllUsers() {
         try {
-            let { data } = await axios(`/api/v1/all-users`)
+            let { data } = await axios(`https://myecom-48cw.onrender.com/api/v1/all-users`)
             if (data.success) {
                 setAllUser(data.users)
             }

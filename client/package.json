@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://myecom-48cw.onrender.com",
+  "proxy": "https://localhost:8090",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

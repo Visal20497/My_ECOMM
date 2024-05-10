@@ -5,7 +5,7 @@ export let createCategoryController = async (req, res) => {
     try {
         let { name } = req.body
         if (!name) {
-            res.status(200).send({ message: "Field is required" })
+          return  res.status(200).send({ message: "Field is required" })
         }
         let result = await categoryModel.findOne({ name: name })
         if (result) {

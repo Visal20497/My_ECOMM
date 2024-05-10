@@ -58,7 +58,6 @@ function HomePage() {
       console.log(err);
     }
   }
-
   //this is for product-list
   async function productList() {
     let { data } = await axios.get(`/api/v1/product-list/${pageCount}`);
@@ -134,7 +133,7 @@ function HomePage() {
               <hr />
               <div className="mt-2">
                 <Radio.Group onChange={priceHandler}>
-                  {Price.map((item) => {
+                  {Price?.map((item) => {
                     return (
                       <div key={item._id} className="p-2">
                         <Radio value={item.array}>{item.name}</Radio>
@@ -177,7 +176,7 @@ function HomePage() {
                   {(selectedCategory.length > 0 || price
                     ? filterData
                     : limitProduct
-                  ).map((item, i) => {
+                  )?.map((item, i) => {
                     let {
                       name = "unknow",
                       price = 0,

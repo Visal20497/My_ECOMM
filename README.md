@@ -1,4 +1,6 @@
+🛍️ Vishal-Mart – Full Stack E-Commerce Application
 
+Vishal-Mart is a modern full-stack e-commerce web application that allows users to browse, search, filter, and purchase products seamlessly. The platform provides a smooth shopping experience with secure authentication, payment integration, and dynamic product management.
 # Project Title
 MY_ECOMM
 
